@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-slate-800 bg-slate-50 font-sans selection:bg-amber-600 selection:text-white;
+  }
+}
+
+/* ==========================================
+   Subtle Floating Animations
+   ========================================== */
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes float-sneaker {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-1deg); }
+}
+
+@keyframes shadow-breathe {
+  0%, 100% { transform: scaleX(1); opacity: 0.22; }
+  50% { transform: scaleX(0.92); opacity: 0.14; }
+}
+
+@keyframes shine-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 5s ease-in-out infinite;
+}
+
+.animate-float-sneaker {
+  animation: float-sneaker 5s ease-in-out infinite;
+}
+
+.animate-shadow-breathe {
+  animation: shadow-breathe 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+/* ==========================================
+   Accessibility: Respect Reduced Motion
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-subtle,
+  .animate-float-sneaker,
+  .animate-shadow-breathe,
+  .animate-pulse,
+  .animate-spin,
+  .animate-pulse-glow,
+  .animate-fade-in-up {
+    animation: none !important;
+  }
+  .card-option,
+  .card-option:hover,
+  .card-option:active,
+  .card-option.is-selected,
+  .pricelist-card {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================
+   Card Selection & Tactile Micro-Interactions
+   ========================================== */
+.card-option {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              background-color 0.2s ease;
+  will-change: transform, border-color, box-shadow;
+}
+
+.card-option:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+  background-color: #ffffff;
+}
+
+.card-option:active {
+  transform: scale(0.98);
+}
+
+.card-option.is-selected {
+  border-color: #0f172a !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 0 2px #0f172a,
+              0 6px 18px -3px rgba(15, 23, 42, 0.14) !important;
+  transform: translateY(-2px);
+}
+
+.card-option.is-selected .card-icon-wrap {
+  background-color: #fef3c7 !important;
+  color: #b45309 !important;
+}
+
+/* ==========================================
+   Pricelist Card Hover & Best Value
+   ========================================== */
+.pricelist-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.pricelist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.08),
+              0 8px 16px -4px rgba(0, 0, 0, 0.04);
+}
+
+.pricelist-card.is-best-value {
+  border-color: #d97706;
+  box-shadow: 0 0 0 1.5px #d97706, 0 4px 14px -2px rgba(217, 119, 6, 0.18);
+}
+
+/* ==========================================
+   Diagnosis Progress Bar
+   ========================================== */
+.diagnosis-progress-bar {
+  height: 8px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.diagnosis-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0f172a 0%, #d97706 65%, #f59e0b 100%);
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.diagnosis-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: shine-sweep 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   Section Wave Divider
+   ========================================== */
+.section-wave-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-wave-divider::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath d='M0,20 C360,40 720,0 1080,20 C1260,30 1350,15 1440,20 L1440,0 L0,0 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat center top;
+  background-size: 100% 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section-wave-divider-dark::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath d='M0,20 C360,40 720,0 1080,20 C1260,30 1350,15 1440,20 L1440,0 L0,0 Z' fill='%23f8fafc'/%3E%3C/svg%3E") no-repeat center top;
+  background-size: 100% 100%;
+}
+
+/* ==========================================
+   FAQ Accordion
+   ========================================== */
+.faq-item {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.faq-item:hover {
+  background-color: #fafbfc;
+}
+
+.faq-item.is-open {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.faq-toggle-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item.is-open .faq-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease,
+              padding 0.25s ease;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-item.is-open .faq-answer {
+  opacity: 1;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+/* ==========================================
+   Navbar Active Section Indicator
+   ========================================== */
+.nav-link-active {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: #d97706;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   Before/After Showcase
+   ========================================== */
+.ba-placeholder {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* ==========================================
+   Match Badges
+   ========================================== */
+.badge-green {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-blue {
+  background-color: #f0f9ff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+}
+
+.badge-yellow {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* ==========================================
+   Scrollbar Utility
+   ========================================== */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

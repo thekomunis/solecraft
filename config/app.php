@@ -56,7 +56,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', '/'),
+    'asset_url' => env('ASSET_URL', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -211,5 +211,21 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Workshop Location & Operating Hours
+    |--------------------------------------------------------------------------
+    */
+    'workshop_address' => env('WORKSHOP_ADDRESS', 'Jl. Irigasi Gang Penganten No.67 RT.001a / RW.01 Pekayon Jaya, Bekasi Selatan, Kota Bekasi, Jawa Barat 17148'),
+    'workshop_hours' => env('WORKSHOP_HOURS', 'Buka Setiap Hari (09.00 - 21.00 WIB) & Drop-Off via Appointment'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | WhatsApp Official Contact Number
+    |--------------------------------------------------------------------------
+    */
+    'whatsapp_number' => env('WHATSAPP_NUMBER', '6285810993812'),
+    'whatsapp_display' => env('WHATSAPP_DISPLAY', '+62 858-1099-3812'),
 
 ];

@@ -16,4 +16,13 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    /**
+     * Verify test suite strictly uses the dedicated test database from .env.testing.
+     */
+    public function test_environment_uses_dedicated_testing_database(): void
+    {
+        $this->assertEquals('shoe_care_recommendation_test', config('database.connections.mysql.database'));
+        $this->assertEquals('3307', (string) config('database.connections.mysql.port'));
+    }
 }
