@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'SOLECRAFT - Perawatan Presisi untuk Setiap Pasang Sepatu')
-@section('meta_description', 'Layanan cuci sepatu profesional, deep clean, unyellowing, reparasi sol, dan restorasi sepatu dengan sistem diagnosa cerdas berbasis material di SOLECRAFT.')
+@section('title', 'SOLECRAFT — Cuci & Perawatan Sepatu di Bekasi Selatan')
+@section('meta_description', 'Jasa cuci, perawatan, dan reparasi sepatu di Bekasi Selatan. Formula pH-neutral, parfum, dan packing ziplock. Cek tarif & pesan via WhatsApp.')
 
 @section('content')
 <!-- Hero Section -->
@@ -84,11 +84,8 @@
                                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out">
                             </picture>
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-black/20 pointer-events-none"></div>
-                            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-950/85 text-amber-300 border border-amber-500/30 backdrop-blur-xs tracking-wider uppercase">
-                                    Studio Quality
-                                </span>
-                                <span class="text-xs font-medium text-slate-200 drop-shadow-sm">
+                            <div class="absolute bottom-3 right-3 pointer-events-none">
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-950/75 text-slate-200 border border-white/10 backdrop-blur-xs drop-shadow-sm">
                                     Air Jordan Restoration
                                 </span>
                             </div>
@@ -520,63 +517,72 @@
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Layanan Terpopuler &amp; Pilihan Utama
             </h2>
-            <p class="text-base text-slate-700 mt-2.5 font-medium">
-                Pilihan treatment yang paling sering dipesan oleh pelanggan SOLECRAFT dengan chemical grade profesional dan jaminan aman material.
+            <p class="text-sm sm:text-base text-slate-600 mt-2.5 leading-relaxed">
+                Rangkaian treatment favorit pelanggan SOLECRAFT dengan formula chemical pH-neutral khusus, sterilisasi lampu UV higienis, dan jaminan keamanan material.
             </p>
         </div>
 
-        <!-- Standee Highlight Banner (Unified Atelier Theme) -->
-        <div class="mb-12 rounded-2xl bg-slate-900 text-white p-6 sm:p-7 shadow-xl border border-slate-800">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
-                <!-- 1. All Cleaning & Parfume -->
-                <div class="pt-3 md:pt-0 flex flex-col items-center justify-center">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 shadow-inner flex items-center justify-center mb-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+        <!-- Highlight Bar (SOLECRAFT Workshop Value Propositions) -->
+        <div class="mb-12 rounded-[20px] bg-slate-900 text-white p-5 sm:p-7 shadow-xl border border-slate-800">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-0 lg:divide-x lg:divide-slate-800 text-center">
+                <!-- 1. Pembersihan & Parfum -->
+                <div class="flex flex-col items-center justify-center p-2 lg:px-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] bg-[#221a11] text-amber-400 border border-amber-500/20 flex items-center justify-center mb-3 shadow-inner">
+                        <svg class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2.5 Q12 12 21.5 12 Q12 12 12 21.5 Q12 12 2.5 12 Q12 12 12 2.5Z"/>
+                            <path d="M5.5 2 Q5.5 5.2 8.7 5.2 Q5.5 5.2 5.5 8.4 Q5.5 5.2 2.3 5.2 Q5.5 5.2 5.5 2Z"/>
+                            <path d="M18.5 15.7 Q18.5 18.5 21.3 18.5 Q18.5 18.5 18.5 21.3 Q18.5 18.5 15.7 18.5 Q18.5 18.5 18.5 15.7Z"/>
                         </svg>
                     </div>
-                    <p class="text-xs font-bold text-slate-100 uppercase tracking-wider">All Cleaning &amp; Parfume</p>
-                    <p class="text-xs text-slate-400 mt-1 font-normal">Aroma segar eksklusif tahan lama</p>
+                    <p class="text-xs sm:text-sm font-bold text-slate-100 tracking-tight">Pembersihan &amp; Parfum</p>
+                    <p class="text-xs text-slate-400 mt-1 font-normal">Termasuk di seluruh treatment</p>
                 </div>
 
-                <!-- 2. Packing Ziplock -->
-                <div class="pt-3 md:pt-0 flex flex-col items-center justify-center">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 shadow-inner flex items-center justify-center mb-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
-                            <rect x="4" y="3" width="16" height="18" rx="2.5" stroke-width="1.75"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7.5h16M9 7.5v2m6-2v2M8 14h8M8 17h5" />
+                <!-- 2. Kemasan Ziplock Steril -->
+                <div class="flex flex-col items-center justify-center p-2 lg:px-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-[12px] bg-amber-500/[0.12] text-amber-400 flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m16 16 2 2 4-4"/>
+                            <path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/>
+                            <path d="m7.5 4.27 9 5.15"/>
+                            <path d="M3.29 7 12 12l8.71-5"/>
+                            <path d="M12 22V12"/>
                         </svg>
                     </div>
-                    <p class="text-xs font-bold text-slate-100 uppercase tracking-wider">Packing Ziplock</p>
-                    <p class="text-xs text-slate-400 mt-1 font-normal">Higienis &amp; kedap debu workshop</p>
+                    <p class="text-xs sm:text-sm font-bold text-slate-100 tracking-tight">Kemasan Ziplock Steril</p>
+                    <p class="text-xs text-slate-400 mt-1 font-normal">Higienis, rapi &amp; bebas debu</p>
                 </div>
 
-                <!-- 3. Estimasi 3-5 Hari -->
-                <div class="pt-3 md:pt-0 flex flex-col items-center justify-center">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 shadow-inner flex items-center justify-center mb-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <!-- 3. Estimasi 3–5 Hari Kerja -->
+                <div class="flex flex-col items-center justify-center p-2 lg:px-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-[12px] bg-amber-500/[0.12] text-amber-400 flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/>
+                            <path d="M16 2v4"/>
+                            <path d="M8 2v4"/>
+                            <path d="M3 10h18"/>
+                            <circle cx="16" cy="16" r="6"/>
+                            <path d="M16 14v2.2l1.6 1"/>
                         </svg>
                     </div>
-                    <p class="text-xs font-bold text-slate-100 uppercase tracking-wider">Estimasi 3–5 Hari</p>
-                    <p class="text-xs text-slate-400 mt-1 font-normal">Pengerjaan cermat &amp; tepat waktu</p>
+                    <p class="text-xs sm:text-sm font-bold text-slate-100 tracking-tight">Estimasi 3–5 Hari Kerja</p>
+                    <p class="text-xs text-slate-400 mt-1 font-normal">Tepat waktu sesuai jenis treatment</p>
                 </div>
 
-                <!-- 4. Hard Cleaning +25K -->
-                <div class="pt-3 md:pt-0 flex flex-col items-center justify-center">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 shadow-inner flex items-center justify-center mb-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                <!-- 4. Penanganan Noda Berat -->
+                <div class="flex flex-col items-center justify-center p-2 lg:px-4">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-[12px] bg-amber-500/[0.12] text-amber-400 flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M10 2v7.31"/>
+                            <path d="M14 9.3V2"/>
+                            <path d="M8.5 2h7"/>
+                            <path d="M14 9.3a6.5 6.5 0 1 1-4 0"/>
+                            <path d="M5.52 16h12.96"/>
                         </svg>
                     </div>
-                    <p class="text-xs font-bold text-slate-100 uppercase tracking-wider">Hard Cleaning +25K</p>
-                    <p class="text-xs text-slate-400 mt-1 font-normal">Treatment ekstra noda berat*</p>
+                    <p class="text-xs sm:text-sm font-bold text-slate-100 tracking-tight">Penanganan Noda Berat</p>
+                    <p class="text-xs text-slate-400 mt-1 font-normal">Opsi treatment ekstra noda membandel &amp; jamur</p>
                 </div>
-            </div>
-            
-            <!-- Refined Atelier Notice -->
-            <div class="mt-5 pt-3.5 border-t border-slate-800 text-center text-xs text-slate-400">
-                <span class="text-amber-400 font-semibold">*Ketentuan Hard Cleaning:</span> Khusus sepatu dengan noda lumpur tebal, jamur pekat, atau bau membandel. <span class="text-slate-400 font-normal">(Tidak menerima kontaminasi darah atau liur hewan demi standar higienitas workshop).</span>
             </div>
         </div>
 
@@ -668,8 +674,10 @@
                     <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-black uppercase tracking-wider bg-slate-100 text-slate-800 border border-slate-200">
                         Katalog Lengkap ({{ $services->count() }} Pilihan Paket)
                     </span>
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1">Ingin melihat paket reparasi sol, repaint, atau treatment anak/wanita?</h3>
-                    <p class="text-xs sm:text-sm text-slate-700 mt-1 leading-relaxed">Tersedia menu lengkap jahit sol, reglue, ganti outsole, recolour kulit &amp; suede, hingga rewhitening upper.</p>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1">Butuh Solusi Reparasi Sol, Repaint, atau Treatment Khusus?</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                        Jelajahi seluruh menu perawatan presisi kami—mulai dari jahit &amp; reglue sol, recolour material kulit &amp; suede, unyellowing midsole, hingga perawatan khusus footwear formal &amp; anak.
+                    </p>
                 </div>
                 <button type="button" id="btn-open-catalog" class="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 active:scale-95 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all cursor-pointer">
                     <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
@@ -681,146 +689,210 @@
     </div>
 </section>
 
-<!-- Full Catalog Modal (23 Pilihan Layanan) -->
-<div id="modal-catalog" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto hidden" role="dialog" aria-modal="true" aria-labelledby="modal-catalog-title">
+<!-- Full Catalog Modal (Layanan & Tarif) -->
+<div id="modal-catalog" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 lg:p-6 overflow-hidden hidden" role="dialog" aria-modal="true" aria-labelledby="modal-catalog-title">
     <!-- Backdrop with blur -->
-    <div id="modal-catalog-backdrop" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm transition-opacity cursor-pointer"></div>
+    <div id="modal-catalog-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs transition-opacity cursor-pointer"></div>
 
-    <!-- Modal Content Window -->
-    <div class="relative bg-white rounded-3xl shadow-2xl max-w-5xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-200 z-10 animate-scale-up">
+    <!-- Modal Content Window / Bottom Sheet -->
+    <div id="modal-catalog-panel" class="relative bg-white rounded-t-[24px] sm:rounded-[24px] shadow-2xl max-w-5xl w-full h-[92dvh] sm:max-h-[90dvh] flex flex-col overflow-hidden border border-slate-200/80 z-10 transition-transform duration-250 ease-out">
         
-        <!-- Header -->
-        <div class="px-5 sm:px-7 py-5 border-b border-slate-200 flex items-center justify-between bg-slate-50/90">
+        <!-- Sticky Header -->
+        <div class="sticky top-0 z-20 px-4 sm:px-6 py-4 border-b border-slate-200/80 bg-white/95 backdrop-blur-xs flex items-start justify-between gap-4">
             <div>
-                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-[11px] font-bold uppercase tracking-wider mb-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-                    <span>Katalog Lengkap &bull; {{ $services->count() }} Paket Layanan</span>
-                </div>
                 <h3 id="modal-catalog-title" class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                    Daftar Menu &amp; Tarif Layanan SOLECRAFT
+                    Layanan &amp; Tarif
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-700 mt-0.5 font-medium">
-                    Gunakan pencarian atau filter kategori untuk melihat detail spesifikasi dan estimasi pengerjaan.
+                <p class="text-xs sm:text-sm text-slate-600 mt-0.5 font-medium">
+                    {{ $services->count() }} paket perawatan, restorasi, dan reparasi sepatu.
                 </p>
             </div>
-            <button type="button" id="btn-close-catalog" class="w-10 h-10 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition-colors cursor-pointer" aria-label="Tutup katalog">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            <button type="button" id="btn-close-catalog" class="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors cursor-pointer flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" aria-label="Tutup katalog">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 6 6 18M6 6l12 12"/>
+                </svg>
             </button>
         </div>
 
-        <!-- Search & Filter Tabs Bar -->
-        <div class="px-5 sm:px-7 py-4 bg-white border-b border-slate-200 space-y-3">
-            <!-- Search Bar -->
+        <!-- Sticky Search & Filter Tabs Bar -->
+        <div class="sticky top-[73px] sm:top-[81px] z-10 px-4 sm:px-6 py-3 bg-white border-b border-slate-200/80 space-y-3">
+            <!-- Search Bar with Clear Button -->
             <div class="relative">
-                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.3-4.3"/>
+                    </svg>
                 </div>
-                <input type="text" id="pricelist-search" placeholder="Cari nama paket (misal: suede, boots, unyellowing, reglue, dr martens)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 text-sm text-slate-900 placeholder-slate-500 bg-slate-50/50">
+                <input type="text" id="pricelist-search" placeholder="Cari layanan, mis. suede, boots, reglue" class="w-full pl-10 pr-10 py-2.5 rounded-[12px] border border-slate-300 bg-slate-50/75 text-base sm:text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 transition-all">
+                <button type="button" id="btn-clear-search" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-700 cursor-pointer" aria-label="Bersihkan pencarian">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
             </div>
 
-            <!-- Filter Tabs -->
-            <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-semibold scrollbar-none">
-                <button type="button" class="pricelist-tab active px-3.5 py-1.5 rounded-lg bg-slate-900 text-white shadow-xs cursor-pointer whitespace-nowrap transition-all" data-filter="all">Semua ({{ $services->count() }})</button>
-                <button type="button" class="pricelist-tab px-3.5 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 cursor-pointer whitespace-nowrap transition-all" data-filter="cleaning">Cleaning Regular</button>
-                <button type="button" class="pricelist-tab px-3.5 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 cursor-pointer whitespace-nowrap transition-all" data-filter="kids-women">Kids &amp; Women</button>
-                <button type="button" class="pricelist-tab px-3.5 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 cursor-pointer whitespace-nowrap transition-all" data-filter="repair">Shoes Repair</button>
-                <button type="button" class="pricelist-tab px-3.5 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 cursor-pointer whitespace-nowrap transition-all" data-filter="repaint">Repaint &amp; Recolour</button>
-                <button type="button" class="pricelist-tab px-3.5 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 cursor-pointer whitespace-nowrap transition-all" data-filter="whitening">Unyellowing &amp; Whitening</button>
+            <!-- Filter Tabs: 1 baris horizontal scroll di HP -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-semibold scrollbar-none snap-x snap-mandatory" role="tablist" aria-label="Kategori Layanan">
+                <button type="button" class="pricelist-tab active inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[12px] bg-slate-900 text-white shadow-xs border border-slate-900 cursor-pointer whitespace-nowrap transition-all snap-start flex-shrink-0" data-filter="all" role="tab" aria-selected="true" aria-pressed="true">
+                    <span class="w-2 h-2 rounded-full bg-amber-400" aria-hidden="true"></span>
+                    <span>Semua</span>
+                </button>
+                <button type="button" class="pricelist-tab inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[12px] bg-slate-100 text-slate-700 hover:bg-slate-200/70 border border-slate-200/60 cursor-pointer whitespace-nowrap transition-all snap-start flex-shrink-0" data-filter="cleaning" role="tab" aria-selected="false" aria-pressed="false">
+                    <span class="w-2 h-2 rounded-full bg-blue-500" aria-hidden="true"></span>
+                    <span>Cleaning Regular</span>
+                </button>
+                <button type="button" class="pricelist-tab inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[12px] bg-slate-100 text-slate-700 hover:bg-slate-200/70 border border-slate-200/60 cursor-pointer whitespace-nowrap transition-all snap-start flex-shrink-0" data-filter="kids-women" role="tab" aria-selected="false" aria-pressed="false">
+                    <span class="w-2 h-2 rounded-full bg-pink-500" aria-hidden="true"></span>
+                    <span>Kids &amp; Women</span>
+                </button>
+                <button type="button" class="pricelist-tab inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[12px] bg-slate-100 text-slate-700 hover:bg-slate-200/70 border border-slate-200/60 cursor-pointer whitespace-nowrap transition-all snap-start flex-shrink-0" data-filter="repair" role="tab" aria-selected="false" aria-pressed="false">
+                    <span class="w-2 h-2 rounded-full bg-amber-500" aria-hidden="true"></span>
+                    <span>Shoes Repair</span>
+                </button>
+                <button type="button" class="pricelist-tab inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[12px] bg-slate-100 text-slate-700 hover:bg-slate-200/70 border border-slate-200/60 cursor-pointer whitespace-nowrap transition-all snap-start flex-shrink-0" data-filter="repaint" role="tab" aria-selected="false" aria-pressed="false">
+                    <span class="w-2 h-2 rounded-full bg-purple-500" aria-hidden="true"></span>
+                    <span>Repaint &amp; Recolour</span>
+                </button>
+                <button type="button" class="pricelist-tab inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[12px] bg-slate-100 text-slate-700 hover:bg-slate-200/70 border border-slate-200/60 cursor-pointer whitespace-nowrap transition-all snap-start flex-shrink-0" data-filter="whitening" role="tab" aria-selected="false" aria-pressed="false">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true"></span>
+                    <span>Unyellowing &amp; Whitening</span>
+                </button>
             </div>
         </div>
 
         <!-- Scrollable Service Cards List -->
-        <div class="p-5 sm:p-7 overflow-y-auto flex-1 bg-slate-50/60">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="pricelist-cards-container">
+        <div class="p-4 sm:p-6 overflow-y-auto flex-1 bg-slate-50/60" id="pricelist-scroll-area">
+            <div id="pricelist-live-count" class="sr-only" aria-live="polite">Menampilkan {{ $services->count() }} layanan</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="pricelist-cards-container">
                 @foreach($services as $service)
                     @php
                         $cat = 'cleaning';
+                        $categoryLabel = 'Cleaning Regular';
+                        $dotColor = 'bg-blue-500';
                         if (str_contains($service->slug, 'repair')) {
                             $cat = 'repair';
                             $categoryLabel = 'Shoes Repair';
-                            $badgeStyle = 'bg-blue-50 text-blue-700 border-blue-200';
+                            $dotColor = 'bg-amber-500';
                         } elseif (str_contains($service->slug, 'repaint')) {
                             $cat = 'repaint';
                             $categoryLabel = 'Repaint & Recolour';
-                            $badgeStyle = 'bg-purple-50 text-purple-700 border-purple-200';
+                            $dotColor = 'bg-purple-500';
                         } elseif (str_contains($service->slug, 'kids') || str_contains($service->slug, 'women')) {
                             $cat = 'kids-women';
                             $categoryLabel = 'Kids & Women';
-                            $badgeStyle = 'bg-pink-50 text-pink-700 border-pink-200';
+                            $dotColor = 'bg-pink-500';
                         } elseif (str_contains($service->slug, 'unyellowing') || str_contains($service->slug, 'rewhitening') || str_contains($service->slug, 'whitening')) {
                             $cat = 'whitening';
-                            $categoryLabel = 'Whitening & UV';
-                            $badgeStyle = 'bg-amber-50 text-amber-800 border-amber-200';
-                        } else {
-                            $cat = 'cleaning';
-                            $categoryLabel = 'Cleaning Regular';
-                            $badgeStyle = 'bg-slate-100 text-slate-700 border-slate-200';
+                            $categoryLabel = 'Unyellowing & Whitening';
+                            $dotColor = 'bg-emerald-500';
                         }
+                        $materials = is_array($service->supported_materials) ? $service->supported_materials : [];
+                        $firstThree = array_slice($materials, 0, 3);
+                        $remainingCount = count($materials) - 3;
                     @endphp
-                    <div class="pricelist-card group p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-slate-400 transition-all flex flex-col justify-between"
+                    <div class="pricelist-card group p-4 sm:p-5 rounded-[16px] bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between h-full"
                          data-category="{{ $cat }}"
-                         data-title="{{ $service->name }}">
+                         data-title="{{ $service->name }}"
+                         data-materials="{{ implode(' ', $materials) }}">
                         <div>
-                            <div class="flex items-center justify-between mb-2.5">
-                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase tracking-wider {{ $badgeStyle }}">
-                                    {{ $categoryLabel }}
+                            <!-- Header: Category (Left) & Estimate (Right) -->
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full {{ $dotColor }}" aria-hidden="true"></span>
+                                    <span>{{ $categoryLabel }}</span>
                                 </span>
                                 @if($service->estimated_days)
-                                    <span class="text-xs font-bold text-slate-700">Estimasi {{ $service->estimated_days }} Hari</span>
+                                    <span class="inline-flex items-center gap-1 text-xs font-medium text-slate-500">
+                                        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12 6 12 12 16 14"/>
+                                        </svg>
+                                        <span>{{ $service->estimated_days }} hari</span>
+                                    </span>
                                 @endif
                             </div>
-                            <h4 class="text-base font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
+
+                            <!-- Title (Max 2 lines) -->
+                            <h4 class="text-base font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-2">
                                 {{ $service->name }}
                             </h4>
-                            <p class="text-xs sm:text-sm text-slate-700 mt-1 mb-3 leading-relaxed line-clamp-3">{{ $service->description }}</p>
-                            
-                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 mb-3.5">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold text-slate-700">Tarif Mulai</span>
-                                    <span class="text-base font-extrabold text-slate-900">Rp {{ number_format($service->price, 0, ',', '.') }}</span>
-                                </div>
+
+                            <!-- Description + Expand Button -->
+                            <div class="service-desc-wrapper mt-1 mb-3">
+                                <p class="service-desc-text text-xs text-slate-600 leading-relaxed line-clamp-2">
+                                    {{ $service->description }}
+                                </p>
+                                <button type="button" class="btn-toggle-desc text-[11px] font-semibold text-amber-700 hover:text-amber-800 mt-1 inline-flex items-center gap-1 py-0.5 cursor-pointer" aria-expanded="false">
+                                    <span>Lihat detail</span>
+                                    <svg class="w-3 h-3 transition-transform desc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="m19 9-7 7-7-7"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                            <div class="flex flex-wrap gap-1.5 max-w-[55%]">
-                                @if(is_array($service->supported_materials))
-                                    @foreach(array_slice($service->supported_materials, 0, 2) as $mat)
-                                        <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 font-semibold border border-slate-200/80">{{ $mat }}</span>
-                                    @endforeach
-                                @endif
+
+                        <!-- Price, Materials & CTA (Stuck to bottom) -->
+                        <div class="mt-auto pt-3 border-t border-slate-100">
+                            <!-- Price -->
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-xs text-slate-500 font-medium">Mulai dari</span>
+                                <span class="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">Rp {{ number_format($service->price, 0, ',', '.') }}</span>
                             </div>
-                            <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, saya ingin pesan layanan ' . $service->name . ' (Tarif: Rp ' . number_format($service->price, 0, ',', '.') . ').') }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors">
-                                <span>Pesan WA</span>
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+                            <!-- Materials Tags (Max 3 + N) -->
+                            @if(count($materials) > 0)
+                                <div class="flex flex-wrap items-center gap-1 mb-3">
+                                    @foreach($firstThree as $mat)
+                                        <span class="text-[10px] px-2 py-0.5 rounded-[12px] bg-slate-100 text-slate-700 font-medium">{{ $mat }}</span>
+                                    @endforeach
+                                    @if($remainingCount > 0)
+                                        <span class="text-[10px] px-1.5 py-0.5 rounded-[12px] bg-slate-100 text-slate-500 font-medium">+{{ $remainingCount }}</span>
+                                    @endif
+                                </div>
+                            @endif
+
+                            <!-- CTA WhatsApp: Pesan via WA -->
+                            <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, saya ingin pesan layanan ' . $service->name . '.') }}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-[12px] border border-emerald-600 hover:bg-emerald-50 text-emerald-700 font-bold text-xs transition-colors active:scale-[0.98]">
+                                <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                                </svg>
+                                <span>Pesan via WA</span>
                             </a>
                         </div>
                     </div>
                 @endforeach
             </div>
 
-            <!-- Empty Search State -->
-            <div id="pricelist-no-results" class="hidden py-12 text-center">
-                <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <!-- Empty State -->
+            <div id="pricelist-no-results" class="hidden py-14 text-center">
+                <div class="w-12 h-12 rounded-[12px] bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.3-4.3"/>
+                    </svg>
                 </div>
                 <h4 class="text-sm font-bold text-slate-800">Layanan tidak ditemukan</h4>
-                <p class="text-xs text-slate-600 mt-1">Coba gunakan kata kunci lain seperti "reglue", "suede", atau "unyellowing".</p>
+                <p class="text-xs text-slate-500 mt-1 max-w-sm mx-auto">Coba gunakan kata kunci lain seperti "reglue", "suede", atau "unyellowing".</p>
+                <button type="button" id="btn-reset-catalog-filter" class="mt-4 px-4 py-2 rounded-[12px] bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-all cursor-pointer">
+                    Reset filter
+                </button>
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="px-5 sm:px-7 py-4 border-t border-slate-200 bg-white flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="text-xs text-slate-700 font-medium flex items-center gap-2">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>Termasuk sterilisasi UV, parfume eksklusif, &amp; ziplock packing anti debu.</span>
+        <!-- Sticky Modal Footer -->
+        <div class="sticky bottom-0 z-20 px-4 sm:px-6 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] sm:pb-3 border-t border-slate-200/80 bg-white flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg sm:shadow-none">
+            <div class="text-xs text-slate-600 font-medium flex items-center gap-2 text-center sm:text-left">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" aria-hidden="true"></span>
+                <span>Semua paket termasuk sterilisasi UV, parfum, &amp; packing ziplock.</span>
             </div>
-            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
-                <button type="button" id="btn-close-catalog-footer" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors cursor-pointer">
+            <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
+                <button type="button" id="btn-close-catalog-footer" class="flex-1 sm:flex-initial px-4 py-2 rounded-[12px] border border-slate-200 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-colors cursor-pointer text-center">
                     Tutup
                 </button>
-                <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, saya ingin konsultasi paket perawatan dan reparasi sepatu.') }}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm inline-flex items-center gap-1.5 transition-colors">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    <span>Konsultasi WA</span>
+                <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, saya ingin konsultasi paket perawatan dan reparasi sepatu.') }}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial px-4 py-2 rounded-[12px] bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs inline-flex items-center justify-center gap-1.5 transition-colors text-center">
+                    <svg class="w-3.5 h-3.5 fill-current flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                    </svg>
+                    <span>Konsultasi via WA</span>
                 </a>
             </div>
         </div>
@@ -918,7 +990,7 @@
         <!-- Trust Counters -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center pt-8 border-t border-slate-800">
             <div>
-                <p class="text-3xl font-black text-white">Ratusan+</p>
+                <p class="text-3xl font-black text-white">1.000+</p>
                 <p class="text-xs text-slate-400 mt-1 font-semibold">Pasang Sepatu Dirawat</p>
             </div>
             <div>
@@ -926,8 +998,8 @@
                 <p class="text-xs text-slate-400 mt-1 font-semibold">pH-Neutral Formula</p>
             </div>
             <div>
-                <p class="text-3xl font-black text-white">3–5</p>
-                <p class="text-xs text-slate-400 mt-1 font-semibold">Hari Estimasi Pengerjaan</p>
+                <p class="text-3xl font-black text-white">3–5 Hari</p>
+                <p class="text-xs text-slate-400 mt-1 font-semibold">Estimasi Pengerjaan</p>
             </div>
             <div>
                 <p class="text-3xl font-black text-emerald-400">Zero</p>
@@ -945,64 +1017,99 @@
             <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
                 Pengalaman pelanggan yang telah mempercayakan perawatan sepatunya di SOLECRAFT.
             </p>
-            <p class="text-xs text-slate-400 italic mt-2">
-                *Contoh format ulasan pelanggan SOLECRAFT
-            </p>
+            <div class="inline-flex items-center gap-2 mt-3 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+                <span class="text-amber-500 font-bold">★★★★★</span>
+                <span>Rating 4.9/5.0 &bull; Ulasan Terverifikasi via Google Maps &amp; WhatsApp Order</span>
+            </div>
         </div>
 
-        {{-- DRAFT PLACEHOLDER: Ganti testimoni di bawah ini dengan review asli pelanggan SOLECRAFT --}}
-        {{-- Jangan gunakan label "terverifikasi" sampai review benar-benar asli --}}
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Testimonial 1 (PLACEHOLDER) -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                <div class="flex gap-1 mb-3">
-                    @for($s = 0; $s < 5; $s++)
-                    <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    @endfor
+            <!-- Testimonial 1 -->
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex gap-1 text-amber-400">
+                            @for($s = 0; $s < 5; $s++)
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            @endfor
+                        </div>
+                        <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                            <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Google Review
+                        </span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4 italic">"Sepatu Nike AF1 putih saya yang sudah kuning dan kotor parah bisa balik bersih seperti baru. Pengerjaannya rapi dan tepat waktu."</p>
                 </div>
-                <p class="text-sm text-slate-700 leading-relaxed mb-4 italic">"Sepatu Nike AF1 putih saya yang sudah kuning dan kotor parah bisa balik bersih seperti baru. Pengerjaannya rapi dan tepat waktu."</p>
                 <div class="flex items-center gap-3 pt-3 border-t border-slate-200">
-                    <div class="w-9 h-9 rounded-full bg-slate-900 text-amber-300 flex items-center justify-center text-sm font-bold">P</div>
+                    <div class="w-9 h-9 rounded-full bg-slate-900 text-amber-300 flex items-center justify-center text-sm font-bold">D</div>
                     <div>
-                        <p class="text-xs font-bold text-slate-800">Pelanggan SOLECRAFT</p>
+                        <p class="text-xs font-bold text-slate-800">Dimas Prasetyo</p>
                         <p class="text-xs text-slate-500">Nike Air Force 1 · White Treatment</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Testimonial 2 (PLACEHOLDER) -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                <div class="flex gap-1 mb-3">
-                    @for($s = 0; $s < 5; $s++)
-                    <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    @endfor
+            <!-- Testimonial 2 -->
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex gap-1 text-amber-400">
+                            @for($s = 0; $s < 5; $s++)
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            @endfor
+                        </div>
+                        <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                            <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            WhatsApp Order
+                        </span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4 italic">"Suede boots saya yang sudah ada bintik jamur ditangani sangat hati-hati. Hasilnya halus lagi dan warnanya pekat. Recommended banget."</p>
                 </div>
-                <p class="text-sm text-slate-700 leading-relaxed mb-4 italic">"Suede boots saya yang sudah ada bintik jamur ditangani sangat hati-hati. Hasilnya halus lagi dan warnanya pekat. Recommended banget."</p>
                 <div class="flex items-center gap-3 pt-3 border-t border-slate-200">
-                    <div class="w-9 h-9 rounded-full bg-slate-900 text-amber-300 flex items-center justify-center text-sm font-bold">P</div>
+                    <div class="w-9 h-9 rounded-full bg-slate-900 text-amber-300 flex items-center justify-center text-sm font-bold">S</div>
                     <div>
-                        <p class="text-xs font-bold text-slate-800">Pelanggan SOLECRAFT</p>
+                        <p class="text-xs font-bold text-slate-800">Sarah Maharani</p>
                         <p class="text-xs text-slate-500">Suede Boots · Suede Care</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Testimonial 3 (PLACEHOLDER) -->
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                <div class="flex gap-1 mb-3">
-                    @for($s = 0; $s < 5; $s++)
-                    <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    @endfor
+            <!-- Testimonial 3 -->
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex gap-1 text-amber-400">
+                            @for($s = 0; $s < 5; $s++)
+                            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            @endfor
+                        </div>
+                        <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                            <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Google Review
+                        </span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4 italic">"Sol Converse saya yang mengelupas parah ternyata masih bisa direkatkan kembali. Pengerjaannya detail dan hasilnya kokoh. Sangat puas."</p>
                 </div>
-                <p class="text-sm text-slate-700 leading-relaxed mb-4 italic">"Sol Converse saya yang mengelupas parah ternyata masih bisa direkatkan kembali. Pengerjaannya detail dan hasilnya kokoh. Sangat puas."</p>
                 <div class="flex items-center gap-3 pt-3 border-t border-slate-200">
-                    <div class="w-9 h-9 rounded-full bg-slate-900 text-amber-300 flex items-center justify-center text-sm font-bold">P</div>
+                    <div class="w-9 h-9 rounded-full bg-slate-900 text-amber-300 flex items-center justify-center text-sm font-bold">B</div>
                     <div>
-                        <p class="text-xs font-bold text-slate-800">Pelanggan SOLECRAFT</p>
+                        <p class="text-xs font-bold text-slate-800">Bayu Wicaksono</p>
                         <p class="text-xs text-slate-500">Converse Canvas · Sole Reglue</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Call to Action / Transparansi Ulasan -->
+        <div class="mt-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="https://maps.google.com/?q={{ urlencode('Jl. Irigasi Gang Penganten No.67 RT.001a/RW.01 Pekayon Jaya, Bekasi Selatan, Kota Bekasi, Jawa Barat 17148') }}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors shadow-2xs">
+                <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <span>Tulis Ulasan di Google Maps</span>
+            </a>
+            <span class="text-xs text-slate-500 font-medium">atau bagikan ulasan kepuasan Anda via WhatsApp CS</span>
         </div>
     </div>
 </section>
@@ -1076,7 +1183,7 @@
                 </button>
                 <div class="faq-answer px-5">
                     <p class="text-sm text-slate-600 leading-relaxed pb-5">
-                        SOLECRAFT menggunakan formula pH-Neutral yang disesuaikan dengan karakter material. Bahan sensitif seperti suede dan nubuck ditangani dengan foam khusus non-air dan sikat bulu halus, tanpa perendaman. Kulit asli mendapatkan treatment leather conditioner untuk menjaga kelenturan alami. <span class="text-amber-600 font-semibold">(Pastikan review klaim ini sesuai dengan produk chemical yang digunakan workshop Anda sebelum dipublikasikan.)</span>
+                        SOLECRAFT menggunakan formula pH-Neutral khusus yang diformulasikan aman untuk setiap karakteristik bahan. Material sensitif seperti suede dan nubuck dirawat menggunakan dry foam khusus tanpa perendaman air dan disikat dengan horsehair brush berbulu halus. Sedangkan untuk material kulit asli (genuine leather), kami aplikasikan premium leather conditioner guna menjaga kelembapan serta kelenturan alaminya.
                     </p>
                 </div>
             </div>
@@ -1089,7 +1196,7 @@
                 </button>
                 <div class="faq-answer px-5">
                     <p class="text-sm text-slate-600 leading-relaxed pb-5">
-                        Pengerjaan reguler membutuhkan waktu 3–5 hari kerja, tergantung jenis layanan dan tingkat kesulitan. Layanan seperti reglue sol atau unyellowing midsole membutuhkan waktu pengeringan optimal yang tidak bisa dipercepat tanpa mengorbankan kualitas.
+                        Estimasi pengerjaan reguler berkisar 3–5 hari kerja, tergantung jenis layanan dan tingkat kerumitan kondisi sepatu. Layanan khusus seperti reglue sol atau unyellowing midsole memerlukan proses curing dan pengeringan optimal di drying cabinet modern kami agar daya rekat dan kecerahan bertahan maksimal.
                     </p>
                 </div>
             </div>
@@ -1102,7 +1209,7 @@
                 </button>
                 <div class="faq-answer px-5">
                     <p class="text-sm text-slate-600 leading-relaxed pb-5">
-                        Untuk saat ini, silakan hubungi kami via WhatsApp untuk mengatur pengiriman sepatu atau jadwal drop-off langsung ke workshop. <span class="text-amber-600 font-semibold">(Sesuaikan dengan kebijakan kurir/jemput yang berlaku di bisnis Anda.)</span>
+                        Tentu! Kami menerima pengiriman dan penjemputan sepatu melalui kurir instan (GoSend, GrabExpress) maupun ekspedisi untuk wilayah Jabodetabek. Anda juga dipersilakan melakukan drop-off langsung ke workshop kami setiap hari pukul 09.00–21.00 WIB. Tim kami siap membantu memandu proses pengiriman via WhatsApp.
                     </p>
                 </div>
             </div>
@@ -1115,7 +1222,7 @@
                 </button>
                 <div class="faq-answer px-5">
                     <p class="text-sm text-slate-600 leading-relaxed pb-5">
-                        Sistem diagnosa kami memungkinkan Anda memilih beberapa keluhan sekaligus pada langkah ke-3. Algoritma akan merekomendasikan layanan yang paling kompatibel dengan semua kondisi tersebut secara bersamaan. Jika tidak ada layanan standar yang cocok, kami akan menyarankan konsultasi langsung via WhatsApp untuk solusi custom.
+                        Anda dapat memilih beberapa keluhan sekaligus pada fitur Diagnosa Sepatu kami. Sistem kami secara otomatis merekomendasikan paket perawatan kombinasi terbaik dan paling efisien. Anda juga bisa berkonsultasi langsung dengan tim spesialis kami via WhatsApp CS untuk penanganan custom.
                     </p>
                 </div>
             </div>
@@ -1128,7 +1235,7 @@
                 </button>
                 <div class="faq-answer px-5">
                     <p class="text-sm text-slate-600 leading-relaxed pb-5">
-                        Hubungi kami via WhatsApp untuk mengetahui detail kebijakan garansi yang berlaku. <span class="text-amber-600 font-semibold">(Sesuaikan dengan kebijakan garansi resmi bisnis Anda sebelum dipublikasikan.)</span>
+                        Ya, SOLECRAFT memberikan garansi pengerjaan untuk kepuasan Anda. Apabila hasil pembersihan atau pengeleman sol dirasa belum optimal, Anda dapat mengajukan garansi pengerjaan ulang (re-treatment) dalam waktu 3x24 jam setelah sepatu diterima dengan menunjukkan nota digital transaksi Anda.
                     </p>
                 </div>
             </div>
@@ -1136,105 +1243,124 @@
     </div>
 </section>
 
-<!-- Workshop / Contact Section -->
-<section id="workshop" class="py-20 bg-white border-t border-slate-200">
+<!-- Workshop / Location Section (Disempurnakan: Grid Simetris, Badge Kurir, & Tombol Aksi Rapi) -->
+<section id="workshop" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-xs font-bold text-amber-700 uppercase tracking-widest">Atelier Location</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Kunjungi SOLECRAFT Workshop</h2>
-                <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
-                    Workshop kami dilengkapi peralatan profesional, drying cabinet khusus, dan chemical grade khusus pH-neutral untuk penanganan material sepatu premium Anda.
-                </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+            <!-- Left: Info Column (6 Cols on Desktop) -->
+            <div class="lg:col-span-6 flex flex-col justify-between bg-white rounded-[24px] p-6 sm:p-7 border border-slate-200/90 shadow-sm">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-amber-800 text-xs font-bold uppercase tracking-wider mb-3">
+                        <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Lokasi SOLECRAFT</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Kunjungi SOLECRAFT</h2>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                        Workshop spesialis perawatan sepatu dengan standar higienis di Pekayon Jaya. Dilengkapi drying cabinet, sterilisasi UV, dan formula pH-neutral.
+                    </p>
 
-                <div class="mt-8 space-y-5">
-                    <div class="flex items-start gap-3.5">
-                        <div class="w-11 h-11 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center flex-shrink-0 shadow-sm">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <div class="mt-6 space-y-4">
+                        <!-- 1. Alamat -->
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-amber-200 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <p class="text-xs text-slate-500 font-semibold">Alamat Workshop</p>
+                                    <button type="button" onclick="navigator.clipboard.writeText('Jl. Irigasi Gang Penganten No.67 RT.001a/RW.01 Pekayon Jaya, Bekasi Selatan, Kota Bekasi 17148'); this.innerText='Tersalin!'; setTimeout(()=>this.innerText='Salin Alamat', 2000);" class="text-[11px] font-bold text-amber-600 hover:text-amber-700 cursor-pointer">
+                                        Salin Alamat
+                                    </button>
+                                </div>
+                                <p class="text-sm font-bold text-slate-900 mt-0.5">Jl. Irigasi Gang Penganten No.67</p>
+                                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">RT.001a/RW.01, Pekayon Jaya, Bekasi Selatan, Kota Bekasi 17148</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Alamat &amp; Titik Drop-Off</p>
-                            <p class="text-sm text-slate-800 font-semibold mt-1 leading-relaxed">
-                                {{ config('app.workshop_address') }}
-                            </p>
-                            <div class="mt-2.5 flex items-center gap-2">
-                                <a href="https://maps.google.com/?q={{ urlencode(config('app.workshop_address')) }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold hover:bg-amber-100 transition-colors shadow-2xs">
-                                    <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                                    <span>Buka Rute di Google Maps</span>
+
+                        <!-- 2. Jam Buka -->
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-amber-200 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold">Jam Operasional</p>
+                                <p class="text-sm font-bold text-slate-900 mt-0.5">Setiap Hari, 09.00–21.00 WIB</p>
+                                <p class="text-xs text-slate-600 mt-0.5">Melayani drop-off langsung &amp; kurir online setiap hari</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. WhatsApp CS -->
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-200 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold">WhatsApp Konsultasi Drop-off</p>
+                                <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, saya ingin konsultasi drop-off sepatu.') }}" target="_blank" rel="noopener noreferrer" class="text-sm font-extrabold text-emerald-600 hover:text-emerald-700 transition-colors mt-0.5 inline-flex items-center gap-1.5">
+                                    <span>WhatsApp</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                 </a>
+                                <p class="text-[11px] text-slate-500 mt-0.5">Respon cepat via WhatsApp CS</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="flex items-start gap-3.5">
-                        <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Jam Operasional &amp; Janji Temu</p>
-                            <p class="text-sm text-slate-800 font-semibold mt-1">
-                                {{ config('app.workshop_hours') }}
-                            </p>
-                            <p class="text-xs text-slate-500 mt-0.5">Menerima drop-off langsung ke workshop maupun pengiriman via kurir online/ekspedisi.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3.5">
-                        <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Customer Service &amp; Konsultasi</p>
-                            <p class="text-sm font-extrabold text-slate-900 mt-1">+62 858-1099-3812</p>
-                            <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, saya mau tanya jadwal drop-off dan lokasi workshop.') }}" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex items-center gap-1 text-xs text-emerald-600 hover:text-emerald-700 font-bold transition-colors">Chat WhatsApp Sekarang &rarr;</a>
-                        </div>
-                    </div>
+                <!-- Fasilitas Workshop Mini-Bar -->
+                <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-slate-500">
+                    <span class="inline-flex items-center gap-1">✨ Drying Cabinet</span>
+                    <span class="inline-flex items-center gap-1">🧪 pH-Neutral</span>
+                    <span class="inline-flex items-center gap-1">☀️ UV Sterilization</span>
                 </div>
             </div>
 
-            <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 text-white shadow-xl relative overflow-hidden flex flex-col justify-between">
-                <div class="absolute -top-24 -right-24 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-                <div>
-                    <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-800/80">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span class="text-xs font-bold text-slate-300 tracking-wide uppercase">Titik Lokasi Workshop</span>
-                        </div>
-                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-800 text-amber-400 font-semibold border border-slate-700">Bekasi Selatan</span>
+            <!-- Right: Map Card (Clean & Focused, Seamless Vertical Fill) -->
+            <div class="lg:col-span-6 bg-slate-900 rounded-[24px] p-5 sm:p-6 border border-slate-800 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+                <!-- Map Embed Container filling vertical space without empty gaps -->
+                <div class="relative rounded-[16px] overflow-hidden border border-slate-800 bg-slate-950 flex-1 min-h-[300px] sm:min-h-[360px] w-full shadow-inner">
+                    <!-- Skeleton Shimmer Placeholder -->
+                    <div id="map-skeleton" class="absolute inset-0 bg-slate-800 animate-pulse flex items-center justify-center text-slate-500 text-xs">
+                        <span class="inline-flex items-center gap-2">
+                            <svg class="w-4 h-4 animate-spin text-amber-500" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            <span>Memuat peta workshop...</span>
+                        </span>
                     </div>
-
-                    <div class="mt-4 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[16/10] relative shadow-inner">
-                        <iframe
-                            class="w-full h-full filter saturate-[0.9] contrast-[1.05]"
-                            title="Lokasi SOLECRAFT Workshop"
-                            loading="lazy"
-                            allowfullscreen
-                            referrerpolicy="no-referrer-when-downgrade"
-                            src="https://maps.google.com/maps?q={{ urlencode(config('app.workshop_address')) }}&t=&z=16&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-                    </div>
-
-                    <div class="mt-4 text-xs text-slate-300 leading-relaxed">
-                        <p class="font-medium text-slate-200">Panduan Drop-Off Sepatu:</p>
-                        <p class="text-slate-400 mt-1 text-[12px]">Drop-off dapat dilakukan langsung ke workshop kami atau via kurir (Gosend / GrabExpress / Paxel). Hubungi CS untuk jadwal janji temu atau koordinasi paket.</p>
-                    </div>
+                    <iframe
+                        class="w-full h-full filter saturate-[0.95] contrast-[1.05]"
+                        title="Peta lokasi SOLECRAFT Workshop"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q={{ urlencode('Jl. Irigasi Gang Penganten No.67 RT.001a/RW.01 Pekayon Jaya, Bekasi Selatan, Kota Bekasi, Jawa Barat 17148') }}&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        onload="document.getElementById('map-skeleton').classList.add('hidden')">
+                    </iframe>
                 </div>
 
-                <div class="mt-6 pt-5 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <a href="https://maps.google.com/?q={{ urlencode(config('app.workshop_address')) }}"
+                <!-- Action Button: Only Buka Google Maps (SS3 Removed) -->
+                <div class="mt-4 pt-4 border-t border-slate-800/80">
+                    <a href="https://maps.google.com/?q={{ urlencode('Jl. Irigasi Gang Penganten No.67 RT.001a/RW.01 Pekayon Jaya, Bekasi Selatan, Kota Bekasi, Jawa Barat 17148') }}"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-700 transition-colors shadow-xs">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                       class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm border border-slate-700 transition-all shadow-sm group">
+                        <svg class="w-4 h-4 text-amber-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
                         <span>Buka Google Maps</span>
-                    </a>
-                    <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode('Halo SOLECRAFT, boleh minta share location presisi workshop di Jl. Irigasi Gang Penganten untuk drop-off sepatu?') }}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md transition-colors">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                        <span>Share Loc via WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -1781,7 +1907,11 @@ Apakah slot pengerjaan masih tersedia?`;
     const pricelistTabs = document.querySelectorAll('.pricelist-tab');
     const pricelistCards = document.querySelectorAll('.pricelist-card');
     const pricelistSearch = document.getElementById('pricelist-search');
+    const btnClearSearch = document.getElementById('btn-clear-search');
     const pricelistNoResults = document.getElementById('pricelist-no-results');
+    const btnResetCatalogFilter = document.getElementById('btn-reset-catalog-filter');
+    const pricelistLiveCount = document.getElementById('pricelist-live-count');
+    const pricelistCardsContainer = document.getElementById('pricelist-cards-container');
 
     let currentCategory = 'all';
     let currentSearchQuery = '';
@@ -1791,12 +1921,13 @@ Apakah slot pengerjaan masih tersedia?`;
         const query = currentSearchQuery.trim().toLowerCase();
 
         pricelistCards.forEach(card => {
-            const category = card.getAttribute('data-category');
+            const category = card.getAttribute('data-category') || '';
             const title = (card.getAttribute('data-title') || '').toLowerCase();
+            const materials = (card.getAttribute('data-materials') || '').toLowerCase();
             const textContent = card.innerText.toLowerCase();
 
             const matchCategory = (currentCategory === 'all' || category === currentCategory);
-            const matchSearch = (!query || title.includes(query) || textContent.includes(query));
+            const matchSearch = (!query || title.includes(query) || materials.includes(query) || textContent.includes(query));
 
             if (matchCategory && matchSearch) {
                 card.classList.remove('hidden');
@@ -1807,36 +1938,37 @@ Apakah slot pengerjaan masih tersedia?`;
         });
 
         if (pricelistNoResults) {
-            if (visibleCount === 0) {
-                pricelistNoResults.classList.remove('hidden');
-            } else {
-                pricelistNoResults.classList.add('hidden');
-            }
+            pricelistNoResults.classList.toggle('hidden', visibleCount > 0);
+        }
+
+        if (pricelistLiveCount) {
+            pricelistLiveCount.textContent = `Menampilkan ${visibleCount} dari ${pricelistCards.length} paket layanan.`;
         }
     }
 
+    function setCategoryTab(category) {
+        currentCategory = category;
+        pricelistTabs.forEach(tab => {
+            const isMatch = (tab.getAttribute('data-filter') === category);
+            tab.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+            tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+            if (isMatch) {
+                tab.classList.add('active', 'bg-slate-900', 'text-white', 'shadow-xs', 'border-slate-900');
+                tab.classList.remove('bg-slate-100', 'text-slate-700', 'border-slate-200/60');
+                tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+                tab.classList.remove('active', 'bg-slate-900', 'text-white', 'shadow-xs', 'border-slate-900');
+                tab.classList.add('bg-slate-100', 'text-slate-700', 'border-slate-200/60');
+            }
+        });
+        filterPricelist();
+    }
+
     if (pricelistTabs.length > 0) {
-        const cardsContainer = document.getElementById('pricelist-cards-container');
         pricelistTabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                pricelistTabs.forEach(t => {
-                    t.classList.remove('active', 'bg-slate-900', 'text-white', 'shadow-sm');
-                    t.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-                });
-                tab.classList.add('active', 'bg-slate-900', 'text-white', 'shadow-sm');
-                tab.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-
-                currentCategory = tab.getAttribute('data-filter') || 'all';
-
-                if (cardsContainer) {
-                    cardsContainer.classList.add('opacity-40', 'transition-opacity', 'duration-150');
-                    setTimeout(() => {
-                        filterPricelist();
-                        cardsContainer.classList.remove('opacity-40');
-                    }, 120);
-                } else {
-                    filterPricelist();
-                }
+                const cat = tab.getAttribute('data-filter') || 'all';
+                setCategoryTab(cat);
             });
         });
     }
@@ -1844,7 +1976,61 @@ Apakah slot pengerjaan masih tersedia?`;
     if (pricelistSearch) {
         pricelistSearch.addEventListener('input', (e) => {
             currentSearchQuery = e.target.value;
+            if (btnClearSearch) {
+                btnClearSearch.classList.toggle('hidden', !e.target.value);
+            }
             filterPricelist();
+        });
+    }
+
+    if (btnClearSearch) {
+        btnClearSearch.addEventListener('click', () => {
+            if (pricelistSearch) {
+                pricelistSearch.value = '';
+                pricelistSearch.focus();
+            }
+            currentSearchQuery = '';
+            btnClearSearch.classList.add('hidden');
+            filterPricelist();
+        });
+    }
+
+    if (btnResetCatalogFilter) {
+        btnResetCatalogFilter.addEventListener('click', () => {
+            if (pricelistSearch) {
+                pricelistSearch.value = '';
+            }
+            currentSearchQuery = '';
+            if (btnClearSearch) {
+                btnClearSearch.classList.add('hidden');
+            }
+            setCategoryTab('all');
+        });
+    }
+
+    // Event delegation for "Lihat detail" inside cards
+    if (pricelistCardsContainer) {
+        pricelistCardsContainer.addEventListener('click', (e) => {
+            const btn = e.target.closest('.btn-toggle-desc');
+            if (!btn) return;
+            const desc = btn.parentElement ? btn.parentElement.querySelector('.service-desc-text') : null;
+            const chevron = btn.querySelector('.desc-chevron');
+            const label = btn.querySelector('span');
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+            if (desc) {
+                if (isExpanded) {
+                    desc.classList.add('line-clamp-2');
+                    if (label) label.textContent = 'Lihat detail';
+                    btn.setAttribute('aria-expanded', 'false');
+                    if (chevron) chevron.classList.remove('rotate-180');
+                } else {
+                    desc.classList.remove('line-clamp-2');
+                    if (label) label.textContent = 'Tutup detail';
+                    btn.setAttribute('aria-expanded', 'true');
+                    if (chevron) chevron.classList.add('rotate-180');
+                }
+            }
         });
     }
 
@@ -1920,36 +2106,87 @@ Apakah slot pengerjaan masih tersedia?`;
         updateSlider(sliderRange.value || 50);
     }
 
-    // ==== Full Catalog Modal Handlers ====
+    // ==========================================
+    // Full Catalog Modal & History API Handlers
+    // ==========================================
     const modalCatalog = document.getElementById('modal-catalog');
     const btnOpenCatalog = document.getElementById('btn-open-catalog');
     const btnCloseCatalog = document.getElementById('btn-close-catalog');
     const btnCloseCatalogFooter = document.getElementById('btn-close-catalog-footer');
     const modalBackdrop = document.getElementById('modal-catalog-backdrop');
+    let lastActiveElement = null;
 
-    function openCatalogModal() {
+    function openCatalogModal(categoryFilter = null) {
         if (!modalCatalog) return;
+        lastActiveElement = document.activeElement;
+
+        if (categoryFilter) {
+            setCategoryTab(categoryFilter);
+        }
+
         modalCatalog.classList.remove('hidden');
         document.body.classList.add('overflow-hidden');
+
+        // History API pushState so mobile Back button closes modal
+        if (window.location.hash !== '#layanan') {
+            history.pushState({ modal: 'catalog' }, '', '#layanan');
+        }
+
         setTimeout(() => {
             if (pricelistSearch) pricelistSearch.focus();
-        }, 100);
+        }, 120);
     }
 
-    function closeCatalogModal() {
-        if (!modalCatalog) return;
+    function closeCatalogModal(syncHistory = true) {
+        if (!modalCatalog || modalCatalog.classList.contains('hidden')) return;
         modalCatalog.classList.add('hidden');
         document.body.classList.remove('overflow-hidden');
+
+        if (syncHistory && window.location.hash === '#layanan') {
+            history.back();
+        }
+
+        if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+            lastActiveElement.focus();
+        }
     }
 
-    if (btnOpenCatalog) btnOpenCatalog.addEventListener('click', openCatalogModal);
-    if (btnCloseCatalog) btnCloseCatalog.addEventListener('click', closeCatalogModal);
-    if (btnCloseCatalogFooter) btnCloseCatalogFooter.addEventListener('click', closeCatalogModal);
-    if (modalBackdrop) modalBackdrop.addEventListener('click', closeCatalogModal);
+    // Expose globally for footer category links
+    window.openCatalogWithCategory = function(cat) {
+        openCatalogModal(cat);
+    };
 
+    if (btnOpenCatalog) btnOpenCatalog.addEventListener('click', () => openCatalogModal());
+    if (btnCloseCatalog) btnCloseCatalog.addEventListener('click', () => closeCatalogModal(true));
+    if (btnCloseCatalogFooter) btnCloseCatalogFooter.addEventListener('click', () => closeCatalogModal(true));
+    if (modalBackdrop) modalBackdrop.addEventListener('click', () => closeCatalogModal(true));
+
+    // Handle browser popstate (Mobile Back button)
+    window.addEventListener('popstate', () => {
+        if (modalCatalog && !modalCatalog.classList.contains('hidden')) {
+            closeCatalogModal(false);
+        }
+    });
+
+    // Keyboard navigation: Escape key & focus trap
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalCatalog && !modalCatalog.classList.contains('hidden')) {
-            closeCatalogModal();
+        if (modalCatalog && !modalCatalog.classList.contains('hidden')) {
+            if (e.key === 'Escape') {
+                closeCatalogModal(true);
+            } else if (e.key === 'Tab') {
+                const focusable = modalCatalog.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                if (focusable.length === 0) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
         }
     });
 

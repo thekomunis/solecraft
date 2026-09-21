@@ -2,12 +2,12 @@
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'SOLECRAFT - Perawatan Presisi untuk Setiap Pasang Sepatu')</title>
-    <meta name="description" content="@yield('meta_description', 'Layanan cuci sepatu profesional, deep clean, unyellowing, reparasi sol, dan restorasi sepatu dengan sistem diagnosa cerdas berbasis material di SOLECRAFT.')">
-    <meta name="keywords" content="cuci sepatu, deep cleaning sepatu, unyellowing sepatu, repaint sepatu, reparasi sol sepatu, shoe care jakarta, solecraft">
+    <title>@yield('title', 'SOLECRAFT — Cuci & Perawatan Sepatu di Bekasi Selatan')</title>
+    <meta name="description" content="@yield('meta_description', 'Jasa cuci, perawatan, dan reparasi sepatu di Bekasi Selatan. Formula pH-neutral, parfum, dan packing ziplock. Cek tarif & pesan via WhatsApp.')">
+    <meta name="keywords" content="cuci sepatu bekasi, perawatan sepatu bekasi selatan, reparasi sepatu, unyellowing sol, repaint sepatu, shoe care bekasi, solecraft">
     <meta name="author" content="SOLECRAFT">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0f172a">
@@ -16,8 +16,8 @@
     <link rel="apple-touch-icon" href="{{ asset('images/logo.png') }}">
 
     @php
-        $defaultOgTitle = 'SOLECRAFT - Perawatan Presisi untuk Setiap Pasang Sepatu';
-        $defaultOgDesc = 'Layanan cuci sepatu profesional, deep clean, unyellowing, reparasi sol, dan restorasi sepatu dengan sistem diagnosa cerdas berbasis material di SOLECRAFT.';
+        $defaultOgTitle = 'SOLECRAFT — Cuci & Perawatan Sepatu di Bekasi Selatan';
+        $defaultOgDesc = 'Jasa cuci, perawatan, dan reparasi sepatu di Bekasi Selatan. Formula pH-neutral, parfum, dan packing ziplock. Cek tarif & pesan via WhatsApp.';
         $metaOgTitle = trim($__env->yieldContent('og_title')) ?: (trim($__env->yieldContent('title')) ?: $defaultOgTitle);
         $metaOgDesc = trim($__env->yieldContent('og_description')) ?: (trim($__env->yieldContent('meta_description')) ?: $defaultOgDesc);
         $metaOgImage = trim($__env->yieldContent('og_image')) ?: asset('images/og-image.jpg');
@@ -45,10 +45,130 @@
     <meta name="twitter:image" content="{{ $metaOgImage }}">
     <meta name="twitter:image:alt" content="{{ $metaOgTitle }}">
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <!-- Google Fonts Preconnect & Swap: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Critical CSS for Instant Preloader (Navy Overlay + Amber Scale Bar) -->
+    <style id="critical-preloader-css">
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background-color: #0b1329;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 250ms ease-out, visibility 250ms ease-out;
+        }
+        #preloader.preloader-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .preloader-bar-wrap {
+            width: 140px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            overflow: hidden;
+            margin-top: 16px;
+        }
+        .preloader-bar {
+            width: 100%;
+            height: 100%;
+            background: #f59e0b;
+            transform-origin: left;
+            animation: preloader-scale 1.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+        @keyframes preloader-scale {
+            0% { transform: scaleX(0); }
+            50% { transform: scaleX(0.7); }
+            100% { transform: scaleX(1); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .preloader-bar {
+                animation: none;
+                transform: scaleX(1);
+            }
+        }
+    </style>
+    <noscript>
+        <style>
+            #preloader { display: none !important; }
+        </style>
+    </noscript>
+
+    <!-- JSON-LD LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SOLECRAFT",
+        "image": "{{ asset('images/og-image.jpg') }}",
+        "url": "{{ url('/') }}",
+        "telephone": "+6285810993812",
+        "priceRange": "Rp 20.000 - Rp 400.000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Irigasi Gang Penganten No.67, RT.001a/RW.01",
+            "addressLocality": "Bekasi Selatan",
+            "addressRegion": "Jawa Barat",
+            "postalCode": "17148",
+            "addressCountry": "ID"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -6.2641,
+            "longitude": 106.9882
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "09:00",
+                "closes": "21:00"
+            }
+        ],
+        "areaServed": [
+            "Bekasi Selatan",
+            "Kota Bekasi",
+            "Pekayon Jaya",
+            "Jabodetabek"
+        ]
+        @if(isset($services) && $services->count() > 0)
+        ,
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Layanan Cuci & Restorasi Sepatu SOLECRAFT",
+            "itemListElement": [
+                @foreach($services as $index => $s)
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "{{ addslashes($s->name) }}",
+                        "description": "{{ addslashes($s->description) }}"
+                    },
+                    "price": "{{ (int) $s->price }}",
+                    "priceCurrency": "IDR"
+                }{{ $loop->last ? '' : ',' }}
+                @endforeach
+            ]
+        }
+        @endif
+    }
+    </script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -60,6 +180,15 @@
     @stack('styles')
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-amber-600 selection:text-white">
+
+    <!-- Preloader Overlay (GLOBAL A) -->
+    <div id="preloader" role="status" aria-label="Memuat SOLECRAFT">
+        <span class="sr-only">Memuat...</span>
+        <img src="{{ asset('images/logo.png') }}" width="48" height="48" alt="SOLECRAFT" class="w-12 h-12 object-contain rounded-full shadow-lg">
+        <div class="preloader-bar-wrap" aria-hidden="true">
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
 
     <!-- Header / Navbar -->
     <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
@@ -137,94 +266,85 @@
         @yield('content')
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 text-sm mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-12">
-                <!-- Brand Info -->
-                <div class="lg:col-span-5">
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="{{ asset('images/logo.png') }}" alt="SOLECRAFT" class="w-10 h-10 object-contain rounded-full shadow-md">
+    <!-- Footer (Desain Baru Mengikuti Referensi Gambar 1 Ourastore) -->
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-800/80 text-sm mt-16 sm:mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-16 pb-8">
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/[0.08]">
+                <!-- Brand Info (5 Cols on Desktop) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="{{ asset('images/logo.png') }}" width="42" height="42" alt="SOLECRAFT" class="w-10 h-10 object-contain rounded-full shadow-md">
                         <div>
                             <span class="text-xl font-black text-white tracking-tight">SOLE<span class="text-amber-500">CRAFT</span></span>
                             <span class="block text-[11px] text-amber-400 font-bold tracking-widest uppercase">SHOE CARE SOLUTIONS</span>
                         </div>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4 max-w-sm">
-                        Workshop perawatan dan restorasi sepatu profesional. Formula pH-neutral ramah serat dan pengerjaan presisi untuk memperpanjang usia sepatu favorit Anda.
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-md">
+                        Spesialis perawatan, deep cleaning presisi, dan restorasi sepatu profesional di Pekayon Jaya, Bekasi Selatan. Pengerjaan higienis dengan formula pH-neutral, sterilisasi sinar UV, dan drying cabinet modern untuk perlindungan maksimal sepatu Anda.
                     </p>
-                    <div class="inline-flex items-center gap-2 text-xs text-slate-400 font-medium">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                        <span>Workshop Aktif &bull; Konsultasi &amp; Drop-Off via WhatsApp</span>
+                </div>
+
+                <!-- 3 Navigation Columns (7 Cols on Desktop: Peta Situs, Dukungan, Legalitas) -->
+                <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10">
+                    <!-- Kolom 1: Peta Situs -->
+                    <div>
+                        <h4 class="text-xs font-bold text-amber-500/90 uppercase tracking-wider mb-4">Peta Situs</h4>
+                        <ul class="space-y-3 text-xs sm:text-sm">
+                            <li><a href="{{ route('home') }}" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Beranda</a></li>
+                            <li><a href="#diagnostik" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Diagnosa Sepatu</a></li>
+                            <li><a href="#cara-kerja" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Cara Kerja</a></li>
+                            <li><a href="#layanan" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Daftar Layanan</a></li>
+                            <li><a href="#faq" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Tanya Jawab (FAQ)</a></li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Layanan Populer -->
-                <div class="lg:col-span-3 sm:col-span-1">
-                    <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4">Layanan Utama</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="#layanan" class="hover:text-amber-400 transition-colors">Deep Cleaning Regular</a></li>
-                        <li><a href="#layanan" class="hover:text-amber-400 transition-colors">Suede &amp; Nubuck Care</a></li>
-                        <li><a href="#layanan" class="hover:text-amber-400 transition-colors">Leather Wax &amp; Conditioner</a></li>
-                        <li><a href="#layanan" class="hover:text-amber-400 transition-colors">Midsole Unyellowing &amp; UV</a></li>
-                        <li><a href="#layanan" class="hover:text-amber-400 transition-colors">Shoes Repair &amp; Sole Reglue</a></li>
-                    </ul>
-                </div>
+                    <!-- Kolom 2: Dukungan -->
+                    <div>
+                        <h4 class="text-xs font-bold text-amber-500/90 uppercase tracking-wider mb-4">Dukungan</h4>
+                        <ul class="space-y-3 text-xs sm:text-sm">
+                            <li>
+                                <a href="https://wa.me/{{ config('app.whatsapp_number', env('WHATSAPP_NUMBER', '6285810993812')) }}" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-flex items-center gap-1.5">
+                                    <span>WhatsApp CS</span>
+                                </a>
+                            </li>
+                            <li><a href="#diagnostik" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Konsultasi Gratis</a></li>
+                            <li><a href="#workshop" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Panduan Drop-off</a></li>
+                            <li>
+                                <a href="#layanan" onclick="if(window.openCatalogWithCategory){ window.openCatalogWithCategory('repair'); return false; }" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">
+                                    Reparasi &amp; Sol
+                                </a>
+                            </li>
+                            <li><a href="#workshop" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
 
-                <!-- Quick Navigation -->
-                <div class="lg:col-span-2 sm:col-span-1">
-                    <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4">Navigasi</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="{{ route('home') }}" class="hover:text-amber-400 transition-colors">Beranda</a></li>
-                        <li><a href="#cara-kerja" class="hover:text-amber-400 transition-colors">Cara Kerja</a></li>
-                        <li><a href="#diagnostik" class="hover:text-amber-400 transition-colors">Diagnosa Sepatu</a></li>
-                        <li><a href="#showcase" class="hover:text-amber-400 transition-colors">Before &amp; After</a></li>
-                        <li><a href="#faq" class="hover:text-amber-400 transition-colors">Pertanyaan (FAQ)</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact & Workshop -->
-                <div class="lg:col-span-2 sm:col-span-1">
-                    <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4">Workshop &amp; Kontak</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li class="text-slate-300 text-xs leading-relaxed">
-                            <span class="block font-semibold text-white">Workshop Bekasi:</span>
-                            <span class="text-slate-400">Pekayon Jaya, Bekasi Selatan</span>
-                        </li>
-                        <li>
-                            <a href="#workshop" class="hover:text-amber-400 transition-colors text-xs flex items-center gap-1">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                <span>Detail Alamat &amp; Rute</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/{{ config('app.whatsapp_number', env('WHATSAPP_NUMBER', '6285810993812')) }}?text={{ urlencode('Halo SOLECRAFT, saya ingin tanya jadwal pengerjaan sepatu.') }}" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors text-xs">Jadwal &amp; Jam Layanan</a>
-                        </li>
-                        <li class="pt-1">
-                            <a href="https://wa.me/{{ config('app.whatsapp_number', env('WHATSAPP_NUMBER', '6285810993812')) }}?text={{ urlencode('Halo SOLECRAFT, saya mau konsultasi perawatan sepatu.') }}" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-300 text-emerald-400 font-bold transition-colors inline-flex items-center gap-1.5 text-xs">
-                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                                <span>+62 858-1099-3812</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <!-- Kolom 3: Legalitas -->
+                    <div class="col-span-2 sm:col-span-1">
+                        <h4 class="text-xs font-bold text-amber-500/90 uppercase tracking-wider mb-4">Legalitas</h4>
+                        <ul class="space-y-3 text-xs sm:text-sm">
+                            <li><a href="#faq" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Kebijakan Layanan</a></li>
+                            <li><a href="#faq" class="text-slate-300 hover:text-white hover:underline underline-offset-4 decoration-1 transition-colors inline-block">Syarat &amp; Ketentuan</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-                <p>&copy; {{ date('Y') }} SOLECRAFT (Shoe Care Solutions). All Rights Reserved.</p>
-                <div class="flex items-center gap-3 text-slate-400 font-medium">
-                    <span>Cleaning</span>
-                    <span>&bull;</span>
-                    <span>Restoration</span>
-                    <span>&bull;</span>
-                    <span>Repairs</span>
-                </div>
+            <!-- Bottom Bar: Hak Cipta 2026 & Kembali ke atas -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+                <p>&copy; 2026 SOLECRAFT. Hak cipta dilindungi.</p>
+                <button type="button" id="btn-back-to-top" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors cursor-pointer text-xs font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" aria-label="Kembali ke atas halaman">
+                    <span>Kembali ke atas</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m18 15-6-6-6 6"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Quick Chat CTA -->
-    <aside aria-label="Konsultasi Cepat WhatsApp" class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50">
+    <aside aria-label="Konsultasi Cepat WhatsApp" class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
         <a href="https://wa.me/{{ config('app.whatsapp_number', env('WHATSAPP_NUMBER', '6285810993812')) }}?text={{ urlencode('Halo Admin SOLECRAFT, saya ingin konsultasi cepat tentang perawatan sepatu saya.') }}"
            target="_blank"
            rel="noopener noreferrer"
@@ -233,24 +353,64 @@
             <span class="absolute -inset-0.5 rounded-full bg-emerald-500/40 animate-ping pointer-events-none opacity-75"></span>
             
             <!-- WhatsApp SVG Icon -->
-            <svg class="w-6 h-6 fill-current relative z-10 flex-shrink-0" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 fill-current relative z-10 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
             </svg>
             <div class="relative z-10 flex flex-col items-start leading-tight">
                 <span class="text-xs sm:text-sm font-extrabold tracking-tight flex items-center gap-1.5">
                     <span>Konsultasi CS</span>
-                    <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" aria-hidden="true"></span>
                 </span>
                 <span class="text-[10px] text-emerald-100 font-medium hidden sm:inline-block">Konsultasi Gratis</span>
             </div>
         </a>
     </aside>
 
+    <!-- Preloader Lifecycle Script (GLOBAL A) -->
+    <script>
+    (function() {
+        const startTime = performance.now();
+        const preloader = document.getElementById('preloader');
+        if (!preloader) return;
+
+        let dismissed = false;
+        function dismissPreloader() {
+            if (dismissed) return;
+            dismissed = true;
+            const elapsed = performance.now() - startTime;
+            const remaining = Math.max(0, 400 - elapsed);
+
+            setTimeout(() => {
+                preloader.classList.add('preloader-hidden');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 250);
+            }, remaining);
+        }
+
+        // Failsafe 2 seconds
+        const failsafeTimer = setTimeout(dismissPreloader, 2000);
+
+        window.addEventListener('load', () => {
+            clearTimeout(failsafeTimer);
+            dismissPreloader();
+        });
+    })();
+    </script>
+
     @stack('scripts')
 
-    <!-- Mobile Menu Toggle & Smooth Scroll Focus Highlight -->
+    <!-- Navigation Drawer, Smooth Scroll Spy, Back-to-top & Reveal -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Back to top button
+        const btnBackToTop = document.getElementById('btn-back-to-top');
+        if (btnBackToTop) {
+            btnBackToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
         // Mobile hamburger drawer toggle
         const toggle = document.getElementById('mobile-menu-toggle');
         const drawer = document.getElementById('mobile-menu-drawer');
@@ -290,14 +450,14 @@
             // Close on resize to desktop
             window.addEventListener('resize', () => {
                 if (window.innerWidth >= 768 && isOpen) closeDrawer();
-            });
+            }, { passive: true });
         }
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', (e) => {
                 const hash = link.getAttribute('href');
-                if (!hash || hash === '#') return;
+                if (!hash || hash === '#' || hash === '#layanan') return;
                 const target = document.querySelector(hash);
                 if (!target) return;
                 e.preventDefault();
@@ -330,6 +490,21 @@
             }, observerOpts);
 
             sections.forEach(sec => observer.observe(sec));
+        }
+
+        // Scroll reveal on scroll
+        const revealElements = document.querySelectorAll('.reveal-on-scroll');
+        if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
         }
     });
     </script>

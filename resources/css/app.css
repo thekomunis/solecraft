@@ -129,10 +129,16 @@
               border-color 0.25s ease;
 }
 
-.pricelist-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.08),
-              0 8px 16px -4px rgba(0, 0, 0, 0.04);
+@media (hover: hover) {
+  .pricelist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08),
+                0 6px 12px -4px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.pricelist-card:active {
+  transform: scale(0.99);
 }
 
 .pricelist-card.is-best-value {
@@ -301,4 +307,57 @@
 }
 .scrollbar-none::-webkit-scrollbar {
   display: none;
+}
+
+/* ==========================================
+   Global Mobile & Accessibility Utilities
+   ========================================== */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Scroll reveal helper */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.35s ease-out, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Bottom sheet slide up on mobile */
+@media (max-width: 639px) {
+  #modal-catalog:not(.hidden) #modal-catalog-panel {
+    animation: slide-up-sheet 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes slide-up-sheet {
+  from {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  #modal-catalog:not(.hidden) #modal-catalog-panel {
+    animation: none !important;
+  }
 }

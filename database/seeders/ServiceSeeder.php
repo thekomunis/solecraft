@@ -10,16 +10,16 @@ class ServiceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     * Updated with official SOLECRAFT Care Pricelist.
+     * Updated with clean, professional SOLECRAFT Care Service Catalog.
      */
     public function run(): void
     {
         $services = [
             // SHOES CLEANING REGULAR
             [
-                'name' => 'Regular Shoes (Warna Gelap)',
+                'name' => 'Regular Clean (Warna Gelap)',
                 'slug' => 'regular-shoes-dark',
-                'description' => 'Pembersihan menyeluruh khusus sneakers & casual warna gelap (hitam, navy, cokelat). Membersihkan upper, midsole, laces, plus parfum eksklusif & packing ziplock steril.',
+                'description' => 'Pembersihan menyeluruh khusus sneakers & casual bernuansa gelap (hitam, navy, dark brown). Membersihkan upper, midsole, outsole, dan tali sepatu secara higienis.',
                 'price' => 45000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -30,9 +30,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Regular Shoes (Warna Terang)',
+                'name' => 'Regular Clean (Warna Terang)',
                 'slug' => 'regular-shoes-light',
-                'description' => 'Pembersihan presisi untuk sneakers & casual warna terang/colorful. Menggunakan formula color-safe untuk mencegah luntur dan mengembalikan kesegaran warna.',
+                'description' => 'Pembersihan presisi untuk sneakers & casual warna cerah atau kombinasi warna. Menggunakan formula color-safe aktif guna mencegah kelunturan dan menjaga kecerahan warna.',
                 'price' => 50000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -43,9 +43,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'White Shoes (Treatment Khusus)',
+                'name' => 'White Shoes Treatment',
                 'slug' => 'white-shoes-treatment',
-                'description' => 'Treatment khusus sepatu putih semua material (All Material). Tarif berjenjang sesuai ukuran: Uk 30–35 (55K), Uk 35–40 (65K), Uk 40–45 (75K).',
+                'description' => 'Perawatan intensif khusus sepatu putih untuk semua material. Mengangkat kusam membandel serta memproteksi upper dan midsole agar kembali bersih dan segar.',
                 'price' => 55000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -56,9 +56,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'White Shoes Whitening & Deep Clean',
+                'name' => 'White Shoes Deep Clean & Whitening',
                 'slug' => 'white-shoes-whitening',
-                'description' => 'Dikhususkan untuk upper sepatu yang menguning akibat noda & oksidasi membandel. Sudah include paket Deep Cleaning menyeluruh luar dan dalam.',
+                'description' => 'Paket komprehensif deep cleaning luar-dalam yang dipadukan dengan formula pencerah aktif untuk mengatasi noda kuning oksidasi membandel pada upper kanvas & sintetis.',
                 'price' => 90000.00,
                 'estimated_days' => 4,
                 'image_url' => null,
@@ -69,9 +69,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Suede & Nubuck Care Treatment',
+                'name' => 'Suede & Nubuck Care (Warna Gelap)',
                 'slug' => 'suede-care-treatment',
-                'description' => 'Pembersihan khusus material suede dan nubuck menggunakan foam non-air dan sikat bulu halus agar tekstur beludru tetap lembut, tidak kaku, dan bebas jamur. Gelap: 55K, Terang: 65K.',
+                'description' => 'Pembersihan khusus material suede dan nubuck gelap menggunakan dry-foam formula non-air dan sikat bulu kuda halus agar tekstur beludru tetap lembut dan bebas jamur.',
                 'price' => 55000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -82,9 +82,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Suede Care (Warna Terang)',
+                'name' => 'Suede & Nubuck Care (Warna Terang)',
                 'slug' => 'suede-care-light',
-                'description' => 'Pembersihan presisi suede warna terang (beige, krem, pastel). Bebas water-spot, tekstur tetap halus natural, dan warna kembali cerah segar.',
+                'description' => 'Pembersihan teliti untuk suede dan nubuck warna cerah (beige, krem, pastel). Mencegah timbulnya noda air (water-spot) serta mengembalikan tekstur halus alami.',
                 'price' => 65000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -95,9 +95,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Leather Care (Wax & Conditioner)',
+                'name' => 'Leather Care & Conditioning',
                 'slug' => 'leather-wax-conditioner',
-                'description' => 'Treatment premium sepatu kulit (Include Wax & Conditioner). Regular Low: 55K, Regular High: 65K, Dr. Martens: 75K, Timberland: 75K.',
+                'description' => 'Perawatan premium sepatu kulit asli (formal & casual). Termasuk deep cleaning higienis, hidrasi leather conditioner, dan semir wax khusus untuk menjaga kelembutan serta kilau alami.',
                 'price' => 55000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -108,9 +108,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Nike Air Jordan Special Care',
+                'name' => 'Air Jordan Special Care',
                 'slug' => 'nike-air-jordan-care',
-                'description' => 'Treatment spesialis sneakers Nike Air Jordan. Ekstra detail toebox, midsole, wings logo, dan outsole. Low: 60K, High: 70K.',
+                'description' => 'Treatment spesialis sneakers koleksi Air Jordan. Pembersihan ekstra presisi pada toebox, midsole, outsole, wings logo, hingga padding pergelangan kaki.',
                 'price' => 60000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -121,9 +121,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Boots Care Treatment',
+                'name' => 'Heavy-Duty Boots Care',
                 'slug' => 'boots-heavy-duty-care',
-                'description' => 'Pembersihan mendalam sepatu boots kulit & outdoor. Regular: 80K, Timberland: 85K, Dr. Martens: 85K, Nubuck: 100K.',
+                'description' => 'Pembersihan mendalam sepatu boots outdoor dan kulit tebal (Red Wing, Timberland, Dr. Martens). Mengangkat kotoran membandel, conditioning kulit, dan sterilisasi antibakteri.',
                 'price' => 80000.00,
                 'estimated_days' => 4,
                 'image_url' => null,
@@ -136,7 +136,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Vans Checkerboard Care',
                 'slug' => 'vans-checkerboard-care',
-                'description' => 'Perawatan khusus motif catur Vans Checkerboard dengan teknik anti-bleeding agar warna hitam tidak merembes ke putih. Uk 35–40: 55K, Uk 40–45: 60K.',
+                'description' => 'Pembersihan khusus motif catur Vans Checkerboard dengan teknik isolasi anti-bleeding agar pigmen warna hitam tidak merembes ke panel kanvas putih.',
                 'price' => 55000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -149,7 +149,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Sandal & Birkenstock Care',
                 'slug' => 'sandal-birkenstock-care',
-                'description' => 'Perawatan sandal & Birkenstock. Pembersihan cork footbed & strap khusus. Birkenstock Rubber: 65K, Birkenstock Suede: 75K.',
+                'description' => 'Perawatan higienis alas kaki kasual, slide, dan sandal Birkenstock. Membersihkan area cork footbed berpori, strap kulit/suede, serta outsole karet secara aman.',
                 'price' => 65000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -162,9 +162,9 @@ class ServiceSeeder extends Seeder
 
             // KIDS SHOES
             [
-                'name' => 'Kids Shoes Cleaning',
+                'name' => 'Kids Shoes Gentle Clean',
                 'slug' => 'kids-shoes-cleaning',
-                'description' => 'Pembersihan higienis sepatu anak untuk semua bahan & model. Small: 20K, Medium: 25K, Regular: 30K. Sudah include all cleaning, parfume, packing ziplock steril.',
+                'description' => 'Pembersihan higienis khusus sepatu anak untuk seluruh material dan model. Menggunakan formula ramah anak tanpa residu tajam, lengkap dengan sterilisasi lampu UV.',
                 'price' => 20000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -177,9 +177,9 @@ class ServiceSeeder extends Seeder
 
             // WOMEN SHOES
             [
-                'name' => 'Women Shoes (Flats, Heels, Wedges)',
+                'name' => 'Women Footwear Care (Flats & Heels)',
                 'slug' => 'women-shoes-cleaning',
-                'description' => 'Perawatan lembut sepatu wanita all cleaning & material. Flat Shoes: 45K, High Heels: 45K, Wedges: 50K. Include parfume, packing ziplock, estimasi 3–5 hari.',
+                'description' => 'Perawatan lembut untuk flat shoes, high heels, dan wedges berbahan sensitif. Membersihkan insole, upper, dan ornamen secara presisi tanpa merusak bentuk sepatu.',
                 'price' => 45000.00,
                 'estimated_days' => 3,
                 'image_url' => null,
@@ -192,9 +192,9 @@ class ServiceSeeder extends Seeder
 
             // SHOES REPAIR
             [
-                'name' => 'Shoes Repair - Jait Sol',
+                'name' => 'Jahit Sol Melingkar (Sol Stitching)',
                 'slug' => 'shoes-repair-sol-stitch',
-                'description' => 'Penjahitan sol melingkar menggunakan benang nilon berlapis lilin anti-putus. Kuat, rapi, dan tahan lama. Rentang tarif pengerjaan: 30K – 100K.',
+                'description' => 'Penjahitan sol melingkar menggunakan benang nilon berkekuatan tinggi berlapis lilin anti-putus. Menyatukan outsole dan upper secara kokoh dan rapi untuk pemakaian jangka panjang.',
                 'price' => 30000.00,
                 'estimated_days' => 4,
                 'image_url' => null,
@@ -205,9 +205,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Shoes Repair - Reglue Press',
+                'name' => 'Reglue Press Outsole',
                 'slug' => 'shoes-repair-reglue',
-                'description' => 'Pengeleman sol lepas atau mangap menggunakan adhesive primer berkualitas tinggi dan mesin press pneumatic. Bergaransi kuat. Tarif: 45K – 150K.',
+                'description' => 'Pengeleman ulang sol sepatu yang lepas atau menganga menggunakan bonding adhesive industri dan mesin press pneumatik terstandarisasi untuk daya rekat maksimal.',
                 'price' => 45000.00,
                 'estimated_days' => 4,
                 'image_url' => null,
@@ -218,9 +218,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Shoes Repair - Reglue + Sol',
+                'name' => 'Paket Komplit Reglue & Jahit Sol',
                 'slug' => 'shoes-repair-reglue-sol',
-                'description' => 'Paket kombinasi komplit pengeleman ulang sol dan jahit sol melingkar. Perlindungan ganda anti-mangap. Rentang tarif: 80K – 120K.',
+                'description' => 'Kombinasi komprehensif pengeleman ulang dengan adhesive primer berkekuatan tinggi serta penjahitan sol melingkar untuk perlindungan ganda anti-lepas.',
                 'price' => 80000.00,
                 'estimated_days' => 5,
                 'image_url' => null,
@@ -231,9 +231,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Shoes Repair - Ganti Outsole',
+                'name' => 'Penggantian Outsole Baru',
                 'slug' => 'shoes-repair-ganti-outsole',
-                'description' => 'Penggantian tapak outsole yang botak, retak, atau licin dengan outsole karet baru sesuai model sepatu. Rentang tarif: 100K – 400K.',
+                'description' => 'Penggantian tapak bawah sepatu yang aus, retak, atau licin dengan outsole karet baru berkualitas tinggi yang presisi dengan model dan ukuran sepatu Anda.',
                 'price' => 100000.00,
                 'estimated_days' => 7,
                 'image_url' => null,
@@ -246,9 +246,9 @@ class ServiceSeeder extends Seeder
 
             // SHOES REPAINT / RECOLOUR
             [
-                'name' => 'Shoes Repaint - Canvas & Mesh/Knit',
+                'name' => 'Recolour Canvas & Mesh/Knit',
                 'slug' => 'shoes-repaint-canvas-mesh',
-                'description' => 'Pengecatan ulang atau ganti warna (recolour) bahan fabric Canvas, Mesh, atau Knit. Menggunakan cat akrilik fleksibel anti-kaku. Tarif: 100K – 300K.',
+                'description' => 'Pengecatan ulang atau restorasi warna pudar untuk kain kanvas, mesh, dan rajut. Menggunakan cat pigmen fleksibel berbahan dasar air yang meresap tanpa membuat kaku.',
                 'price' => 100000.00,
                 'estimated_days' => 7,
                 'image_url' => null,
@@ -259,9 +259,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Shoes Repaint - Leather',
+                'name' => 'Repaint & Recolour Leather',
                 'slug' => 'shoes-repaint-leather',
-                'description' => 'Restorasi warna sepatu kulit asli atau sintetis yang pudar/baret. Finishing rapi, lentur, dan tahan retak. Rentang tarif: 100K – 350K.',
+                'description' => 'Restorasi warna profesional untuk sepatu kulit asli maupun sintetis yang pudar atau tergores. Menghasilkan lapisan pelindung anti-retak bertampilan elegan.',
                 'price' => 100000.00,
                 'estimated_days' => 7,
                 'image_url' => null,
@@ -272,9 +272,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Shoes Repaint - Suede / Nubuck',
+                'name' => 'Recolour Suede & Nubuck',
                 'slug' => 'shoes-repaint-suede-nubuck',
-                'description' => 'Pewarnaan ulang bahan beludru suede & nubuck dengan penetrator dye khusus agar bulu tidak kaku atau menggumpal. Rentang tarif: 100K – 400K.',
+                'description' => 'Pewarnaan ulang bahan beludru suede dan nubuck dengan penetrator dye khusus agar pigmen meresap sempurna ke dalam serat tanpa menggumpalkan bulu halus.',
                 'price' => 100000.00,
                 'estimated_days' => 7,
                 'image_url' => null,
@@ -285,9 +285,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Shoes Repaint - Midsole',
+                'name' => 'Repaint Midsole & Edge Coating',
                 'slug' => 'shoes-repaint-midsole',
-                'description' => 'Pengecatan ulang midsole yang baret parah atau teroksidasi berat. Menggunakan midsole paint elastis tahan tekukan. Rentang tarif: 100K – 150K.',
+                'description' => 'Pengecatan ulang sol samping (midsole) yang kusam, menguning berat, atau tergores menggunakan cat polimer elastis tahan tekukan saat melangkah.',
                 'price' => 100000.00,
                 'estimated_days' => 5,
                 'image_url' => null,
@@ -300,9 +300,9 @@ class ServiceSeeder extends Seeder
 
             // SPECIAL TREATMENT
             [
-                'name' => 'Unyellowing (Midsole)',
+                'name' => 'Unyellowing Midsole Treatment',
                 'slug' => 'unyellowing-midsole',
-                'description' => 'Treatment restorasi midsole karet yang menguning karena oksidasi menggunakan formula khusus & sinar UV. Dilihat dari tingkat kekuningan: Mulai 60K – 95K.',
+                'description' => 'Proses de-oksidasi kimiawi aman yang dipadukan dengan pemaparan sinar UV terukur untuk mengembalikan warna putih bersih midsole karet yang menguning akibat oksidasi.',
                 'price' => 60000.00,
                 'estimated_days' => 4,
                 'image_url' => null,
@@ -313,9 +313,9 @@ class ServiceSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'name' => 'Rewhitening (Upper Sepatu)',
+                'name' => 'Rewhitening Upper Treatment',
                 'slug' => 'rewhitening-upper',
-                'description' => 'Restorasi warna putih pada bagian upper sepatu & midsole cleaning. Dilihat dari tingkat kekuningan bahan upper: Mulai 55K – 90K.',
+                'description' => 'Restorasi warna putih pada bagian upper sepatu yang kusam atau menguning. Mengembalikan kecerahan warna secara merata tanpa merusak serat material.',
                 'price' => 55000.00,
                 'estimated_days' => 4,
                 'image_url' => null,
