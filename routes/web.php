@@ -41,3 +41,24 @@ Route::prefix('admin')->group(function () {
         Route::resource('services', AdminServiceController::class);
     });
 });
+
+// Secured Remote TiDB Cloud Database Seeder Trigger
+Route::get('/system/update-tidb-dataset', function (\Illuminate\Http\Request $request) {
+    if ($request->query('key') !== 'solecraft_secret_sync_2026') {
+        abort(403, 'Unauthorized');
+    }
+
+    \Illuminate\Support\Facades\Artisan::call('db:seed', [
+        '--class' => 'Database\\Seeders\\ServiceSeeder',
+        '--force' => true,
+    ]);
+
+    $output = \Illuminate\Support\Facades\Artisan::output();
+
+    return response()->json([
+        'success' => true,
+        'message' => 'Database TiDB Cloud berhasil di-update dengan ServiceSeeder terbaru!',
+        'output' => trim($output),
+        'total_services' => \App\Models\Service::count(),
+    ]);
+});
