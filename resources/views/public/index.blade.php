@@ -455,7 +455,7 @@
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 mb-10 border-b border-slate-200">
             <div>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">Rekomendasi Treatment Terbaik</h2>
-                <p class="text-xs sm:text-sm text-slate-600 mt-1">Hasil kurasi algoritma pencocokan material &amp; keluhan spesifik sepatu Anda.</p>
+                <p id="results-subtitle" class="text-xs sm:text-sm text-slate-600 mt-1">Hasil kurasi algoritma pencocokan material &amp; keluhan spesifik sepatu Anda.</p>
             </div>
             <div id="results-count-badge" class="hidden">
                 <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-900 text-amber-300 border border-slate-800 shadow-xs">
@@ -489,22 +489,39 @@
         </div>
 
         <!-- Empty State Fallback (Specialist Consultation Required) -->
-        <div id="state-empty" class="hidden p-8 sm:p-12 rounded-3xl bg-amber-50/70 border border-amber-200 text-center max-w-2xl mx-auto">
-            <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mx-auto mb-4">
+        <div id="state-empty" class="hidden p-8 sm:p-12 rounded-3xl bg-amber-50/70 border border-amber-200 text-center max-w-2xl mx-auto shadow-sm">
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mx-auto mb-4 shadow-2xs">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
             </div>
-            <h3 class="text-xl font-bold text-amber-900 mb-2">Konsultasi Spesialis Diperlukan</h3>
-            <p id="empty-state-message" class="text-sm text-amber-800 mb-6 leading-relaxed">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-amber-950 mb-2">Konsultasi Spesialis Diperlukan</h3>
+            <p id="empty-state-message" class="text-xs sm:text-sm text-amber-900 mb-6 leading-relaxed max-w-xl mx-auto">
                 Kombinasi jenis sepatu, material, dan kendala Anda membutuhkan penanganan khusus. Tim spesialis SOLECRAFT siap memberikan diagnosa langsung untuk menemukan perawatan paling optimal.
             </p>
-            <a id="btn-consultation-wa" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-md transition-all">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                </svg>
-                <span>Konsultasi via WhatsApp</span>
-            </a>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a id="btn-consultation-wa" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                    </svg>
+                    <span>Konsultasi via WhatsApp</span>
+                </a>
+                <button type="button" id="btn-empty-reset" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-xs transition-all">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    <span>Ubah Pilihan Diagnosa</span>
+                </button>
+                <button type="button" id="btn-empty-catalog" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-bold text-amber-950 bg-amber-100 hover:bg-amber-200 border border-amber-300 rounded-xl shadow-xs transition-all">
+                    <svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                    <span>Lihat Semua Katalog</span>
+                </button>
+            </div>
+            <p class="text-[11px] text-amber-800/80 mt-5">
+                💡 Tim teknis kami melayani custom restoration untuk sepatu koleksi, sol vintage, dan perawatan bahan sensitif.
+            </p>
         </div>
     </div>
 </section>
@@ -1639,6 +1656,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const text = `Halo Admin SOLECRAFT, saya ingin konsultasi dan pesan layanan treatment sepatu.
+- Model Sepatu: ${shoeType || '-'}
 - Bahan: ${material || '-'}
 - Keluhan: ${issuesStr}
 - Rekomendasi: ${serviceName} (${priceStr})
@@ -1651,6 +1669,7 @@ Apakah slot pengerjaan masih tersedia?`;
     function buildConsultationWhatsAppLink(number, shoeType, material, issues) {
         const issuesStr = Array.isArray(issues) ? issues.join(', ') : (issues || '-');
         const text = `Halo Admin SOLECRAFT, saya ingin konsultasi dan pesan layanan treatment sepatu.
+- Model Sepatu: ${shoeType || '-'}
 - Bahan: ${material || '-'}
 - Keluhan: ${issuesStr}
 - Rekomendasi: Konsultasi Khusus Spesialis
@@ -1664,6 +1683,12 @@ Apakah slot pengerjaan masih tersedia?`;
         const number = whatsappNum || defaultWhatsapp;
 
         resultsCountText.textContent = recommendations.length;
+
+        const resultsSubtitle = document.getElementById('results-subtitle');
+        if (resultsSubtitle && userInput) {
+            const issuesList = (userInput.issues || []).join(', ');
+            resultsSubtitle.innerHTML = `Solusi spesifik untuk siluet <strong>${userInput.shoe_type}</strong> bermaterial <strong>${userInput.material}</strong> dengan penanganan: <span class="text-slate-800 font-semibold">${issuesList}</span>.`;
+        }
 
         recommendations.forEach((item, index) => {
             const badgeClass = item.badge_color === 'green'
@@ -1696,15 +1721,50 @@ Apakah slot pengerjaan masih tersedia?`;
 
             const isMaterialSupported = (item.supported_materials || []).includes(userInput.material);
             const materialReason = isMaterialSupported
-                ? `Formula pH-neutral aman untuk material <strong>${userInput.material}</strong>`
+                ? `Formula khusus teruji aman untuk material <strong>${userInput.material}</strong>`
                 : `Kompatibel dengan material <strong>${userInput.material}</strong>`;
 
-            const typeReason = `Metode penanganan sesuai struktur <strong>${userInput.shoe_type}</strong>`;
+            const isTypeSupported = (item.supported_types || []).includes(userInput.shoe_type);
+            const typeReason = isTypeSupported
+                ? `Metode penanganan sesuai struktur siluet <strong>${userInput.shoe_type}</strong>`
+                : `Sesuai siluet alas kaki <strong>${userInput.shoe_type}</strong>`;
+
+            // Category badge
+            let categoryBadge = '';
+            const slug = item.slug || '';
+            if (slug.includes('repair') || slug.includes('sol') || slug.includes('reglue')) {
+                categoryBadge = '<span class="inline-block px-2.5 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wide bg-blue-50 text-blue-700 border border-blue-200 mb-2">Solusi Perbaikan &amp; Lem Sol</span>';
+            } else if (slug.includes('repaint') || slug.includes('recolour')) {
+                categoryBadge = '<span class="inline-block px-2.5 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wide bg-purple-50 text-purple-700 border border-purple-200 mb-2">Solusi Restorasi Warna</span>';
+            } else if (slug.includes('unyellowing') || slug.includes('whitening')) {
+                categoryBadge = '<span class="inline-block px-2.5 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wide bg-amber-50 text-amber-800 border border-amber-200 mb-2">Solusi De-Oksidasi &amp; Pencerah</span>';
+            } else {
+                categoryBadge = '<span class="inline-block px-2.5 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wide bg-emerald-50 text-emerald-800 border border-emerald-200 mb-2">Pembersihan Higienis &amp; UV</span>';
+            }
+
+            // Variant color guidance (Dark vs Light)
+            let colorGuidance = '';
+            if (item.name.includes('(Warna Gelap)')) {
+                colorGuidance = `
+                    <div class="mb-3.5 p-2.5 rounded-xl bg-slate-900/[0.04] border border-slate-900/10 flex items-center gap-2 text-xs text-slate-700">
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-800 flex-shrink-0"></span>
+                        <span class="leading-tight"><strong>Varian Gelap:</strong> Direkomendasikan untuk sepatu hitam, navy, dark brown, abu tua.</span>
+                    </div>
+                `;
+            } else if (item.name.includes('(Warna Terang)')) {
+                colorGuidance = `
+                    <div class="mb-3.5 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center gap-2 text-xs text-amber-900">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+                        <span class="leading-tight"><strong>Varian Terang:</strong> Direkomendasikan untuk sepatu putih, krem, beige, warna pastel.</span>
+                    </div>
+                `;
+            }
 
             const cardHtml = `
                 <div class="p-6 sm:p-7 rounded-2xl bg-white border-2 ${isTopMatch ? 'border-slate-900 shadow-xl shadow-slate-900/10 ring-1 ring-slate-900' : 'border-slate-200/90 shadow-sm'} flex flex-col justify-between relative transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
                     ${isTopMatch ? '<div class="absolute -top-3.5 left-6 px-3.5 py-1 rounded-full bg-slate-900 text-amber-300 text-[11px] font-extrabold uppercase tracking-wider shadow-md border border-slate-800 flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-amber-400 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg> Rekomendasi Utama</div>' : ''}
                     <div>
+                        ${categoryBadge}
                         <div class="flex items-start justify-between gap-3 mb-2.5">
                             <h3 class="text-lg sm:text-xl font-bold text-slate-900 leading-snug">${item.name}</h3>
                             <span class="px-3 py-1 rounded-full text-xs font-bold ${badgeClass} flex-shrink-0">
@@ -1718,6 +1778,8 @@ Apakah slot pengerjaan masih tersedia?`;
                                 <div class="h-full rounded-full ${barColor}" style="width: ${item.percentage}%"></div>
                             </div>
                         </div>
+
+                        ${colorGuidance}
 
                         <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
                             ${item.description}
@@ -1780,6 +1842,26 @@ Apakah slot pengerjaan masih tersedia?`;
         });
 
         setViewState('success');
+    }
+
+    // Handlers for empty state actions
+    const btnEmptyReset = document.getElementById('btn-empty-reset');
+    if (btnEmptyReset) {
+        btnEmptyReset.addEventListener('click', () => {
+            const diagnostikSection = document.getElementById('diagnostik');
+            if (diagnostikSection) {
+                diagnostikSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    const btnEmptyCatalog = document.getElementById('btn-empty-catalog');
+    if (btnEmptyCatalog) {
+        btnEmptyCatalog.addEventListener('click', () => {
+            if (typeof openCatalogModal === 'function') {
+                openCatalogModal();
+            }
+        });
     }
 
     // Form change event: save to localStorage & refresh styles

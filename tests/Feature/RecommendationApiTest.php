@@ -124,4 +124,33 @@ class RecommendationApiTest extends TestCase
         // Suede & Nubuck Care Treatment should be recommended
         $this->assertContains('suede-care-treatment', $slugs);
     }
+
+    /**
+     * Test user issue scenario:
+     * Selecting Sneakers + Suede + Kotor Ringan/Debu + Bau/Bakteri
+     * MUST NOT return sandals, boots, or women flats, and must recommend Suede Care as top match.
+     */
+    public function test_user_sneakers_and_suede_scenario_does_not_return_sandals_or_boots(): void
+    {
+        $response = $this->postJson('/rekomendasi', [
+            'shoe_type' => 'Sneakers',
+            'material' => 'Suede',
+            'issues' => ['Kotor Ringan/Debu', 'Bau/Bakteri'],
+        ]);
+
+        $response->assertStatus(200);
+        $data = $response->json('data');
+        $slugs = array_column($data, 'slug');
+
+        $this->assertNotEmpty($data);
+
+        // Top recommendation MUST be Suede Care
+        $this->assertEquals('suede-care-treatment', $data[0]['slug']);
+
+        // Incompatible shoe types or materials MUST NOT be present
+        $this->assertNotContains('sandal-birkenstock-care', $slugs);
+        $this->assertNotContains('boots-heavy-duty-care', $slugs);
+        $this->assertNotContains('women-shoes-cleaning', $slugs);
+        $this->assertNotContains('nike-air-jordan-care', $slugs);
+    }
 }

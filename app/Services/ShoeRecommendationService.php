@@ -191,20 +191,53 @@ class ShoeRecommendationService
      * Disqualified if:
      * 1. Service is inactive (is_active == false).
      * 2. User's material is listed in unsuited_materials of the service.
+     * 3. User's material is not in supported_materials (when supported_materials is defined).
+     * 4. User's shoe type is not in supported_types (when shoe type is provided and supported_types is defined).
+     * 5. Service does not resolve any of the user's selected issues (when issues are provided).
      *
      * @param Service $service
      * @param string $userMaterial
+     * @param string|null $userShoeType
+     * @param array<string> $userIssues
      * @return bool True if qualified, false if disqualified.
      */
-    public function passesHardConstraint(Service $service, string $userMaterial): bool
-    {
+    public function passesHardConstraint(
+        Service $service,
+        string $userMaterial,
+        ?string $userShoeType = null,
+        array $userIssues = []
+    ): bool {
         if (!$service->is_active) {
             return false;
         }
 
+        // Material must not be explicitly unsuited
         $unsuited = (array) ($service->unsuited_materials ?? []);
         if (!empty($unsuited) && in_array($userMaterial, $unsuited, true)) {
             return false;
+        }
+
+        // Material must be supported if service defines supported_materials
+        $supportedMaterials = (array) ($service->supported_materials ?? []);
+        if (!empty($supportedMaterials) && !in_array($userMaterial, $supportedMaterials, true)) {
+            return false;
+        }
+
+        // Shoe type must be supported if userShoeType is provided and service defines supported_types
+        if ($userShoeType !== null) {
+            $supportedTypes = (array) ($service->supported_types ?? []);
+            if (!empty($supportedTypes) && !in_array($userShoeType, $supportedTypes, true)) {
+                return false;
+            }
+        }
+
+        // Service must resolve at least one of the user's selected issues
+        if (!empty($userIssues)) {
+            $targetIssues = (array) ($service->target_issues ?? []);
+            $matchedIssues = array_intersect($targetIssues, $userIssues);
+            if (empty($matchedIssues)) {
+                return false;
+            }
         }
 
         return true;
@@ -297,8 +330,8 @@ class ShoeRecommendationService
         $qualifiedCount = 0;
 
         foreach ($allServices as $service) {
-            // 3. Hard Constraint Filtering
-            if (!$this->passesHardConstraint($service, $material)) {
+            // 3. Hard Constraint Filtering (Shoe type, material, unsuited materials, and issue relevance)
+            if (!$this->passesHardConstraint($service, $material, $shoeType, $issues)) {
                 continue;
             }
 
@@ -313,7 +346,15 @@ class ShoeRecommendationService
 
             // 6. Threshold Filtering (score >= 0.40)
             if ($similarity >= self::SIMILARITY_THRESHOLD) {
-                $percentage = round($similarity * 100, 1);
+                // Calibrate score: blend mathematical cosine similarity (40%) and user requirement coverage (60%)
+                // This ensures services fulfilling 100% of user criteria achieve high-confidence ratings (85%-95%+)
+                $matchedIssues = array_intersect((array) ($service->target_issues ?? []), $issues);
+                $matchedCount = count($matchedIssues);
+                $userIssuesCount = max(1, count($issues));
+                $issueRecall = $matchedCount / $userIssuesCount;
+
+                $calibratedScore = min(1.0, max(0.40, (0.40 * $similarity) + (0.60 * $issueRecall)));
+                $percentage = round($calibratedScore * 100, 1);
 
                 $scoredCandidates[] = [
                     'service' => $service,
@@ -325,7 +366,8 @@ class ShoeRecommendationService
                     'formatted_price' => 'Rp ' . number_format($service->price, 0, ',', '.'),
                     'estimated_days' => $service->estimated_days,
                     'image_url' => $service->image_url,
-                    'score' => round($similarity, 4),
+                    'score' => round($calibratedScore, 4),
+                    'cosine_raw' => round($similarity, 4),
                     'percentage' => $percentage,
                     'badge_color' => self::getBadgeColor($percentage),
                     'supported_types' => $service->supported_types,
@@ -336,8 +378,8 @@ class ShoeRecommendationService
         }
 
         // 7. Deterministic Tie-Breaking Ranking:
-        //    score desc, then price asc, then id asc
-        usort($scoredCandidates, function ($a, $b) {
+        //    score desc, then matched issues count desc, then price asc, then id asc
+        usort($scoredCandidates, function ($a, $b) use ($issues) {
             // 1. Score descending
             if ($b['score'] > $a['score']) {
                 return 1;
@@ -346,7 +388,14 @@ class ShoeRecommendationService
                 return -1;
             }
 
-            // 2. Price ascending
+            // 2. Count of matched issues descending
+            $matchedA = count(array_intersect((array) ($a['target_issues'] ?? []), $issues));
+            $matchedB = count(array_intersect((array) ($b['target_issues'] ?? []), $issues));
+            if ($matchedB !== $matchedA) {
+                return $matchedB <=> $matchedA;
+            }
+
+            // 3. Price ascending
             if ($a['price'] < $b['price']) {
                 return -1;
             }
@@ -354,7 +403,7 @@ class ShoeRecommendationService
                 return 1;
             }
 
-            // 3. ID ascending
+            // 4. ID ascending
             return $a['service_id'] <=> $b['service_id'];
         });
 

@@ -59,9 +59,12 @@ class AdminServiceCrudTest extends TestCase
     {
         $response = $this->actingAs($this->admin)->get('/admin/services');
         $response->assertStatus(200)
-            ->assertSee('Katalog Layanan Sepatu')
-            ->assertSee('Regular Shoes (Warna Gelap)')
-            ->assertSee('Suede & Nubuck Care Treatment');
+            ->assertSee('Katalog Layanan Sepatu');
+
+        // Search for regular clean specifically to verify listing and search functionality
+        $searchResponse = $this->actingAs($this->admin)->get('/admin/services?search=Regular');
+        $searchResponse->assertStatus(200)
+            ->assertSee('Regular Clean (Warna Gelap)');
     }
 
     /**

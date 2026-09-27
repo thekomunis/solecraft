@@ -259,4 +259,100 @@ class ShoeRecommendationServiceTest extends TestCase
         $this->assertEquals('service-cheap', $recs[0]['slug']);
         $this->assertEquals('service-expensive', $recs[1]['slug']);
     }
+
+    /**
+     * Test hard constraint: shoe type must be supported by the service.
+     */
+    public function test_shoe_type_hard_constraint_excludes_incompatible_types(): void
+    {
+        $bootsOnlyService = new Service([
+            'name' => 'Boots Only Care',
+            'is_active' => true,
+            'supported_types' => ['Boots'],
+            'supported_materials' => ['Suede'],
+            'target_issues' => ['Kotor Ringan/Debu'],
+        ]);
+
+        $sandalService = new Service([
+            'name' => 'Sandal & Birkenstock Care',
+            'is_active' => true,
+            'supported_types' => ['Slip-on'],
+            'supported_materials' => ['Suede'],
+            'target_issues' => ['Kotor Ringan/Debu'],
+        ]);
+
+        $sneakerService = new Service([
+            'name' => 'Suede Sneaker Care',
+            'is_active' => true,
+            'supported_types' => ['Sneakers'],
+            'supported_materials' => ['Suede'],
+            'target_issues' => ['Kotor Ringan/Debu'],
+        ]);
+
+        // Sneakers input must reject boots and sandals
+        $this->assertFalse($this->service->passesHardConstraint($bootsOnlyService, 'Suede', 'Sneakers', ['Kotor Ringan/Debu']));
+        $this->assertFalse($this->service->passesHardConstraint($sandalService, 'Suede', 'Sneakers', ['Kotor Ringan/Debu']));
+        $this->assertTrue($this->service->passesHardConstraint($sneakerService, 'Suede', 'Sneakers', ['Kotor Ringan/Debu']));
+    }
+
+    /**
+     * Test user scenario: Sneakers + Suede + Kotor Ringan/Debu + Bau/Bakteri
+     * must recommend Suede Care as top match, and NEVER recommend sandals or boots.
+     */
+    public function test_sneakers_and_suede_user_scenario_recommends_suede_care_not_sandals(): void
+    {
+        // 1. Sandal service (Slip-on only)
+        $sandal = Service::create([
+            'name' => 'Sandal & Birkenstock Care',
+            'slug' => 'sandal-birkenstock-care',
+            'description' => 'Sandal description',
+            'price' => 65000,
+            'estimated_days' => 3,
+            'supported_types' => ['Slip-on'],
+            'supported_materials' => ['Synthetic', 'Suede', 'Genuine Leather'],
+            'unsuited_materials' => ['Canvas', 'Mesh/Knit'],
+            'target_issues' => ['Kotor Ringan/Debu', 'Bau/Bakteri', 'Jamur'],
+            'is_active' => true,
+        ]);
+
+        // 2. Heavy Duty Boots service (Boots only)
+        $boots = Service::create([
+            'name' => 'Heavy-Duty Boots Care',
+            'slug' => 'boots-heavy-duty-care',
+            'description' => 'Boots description',
+            'price' => 80000,
+            'estimated_days' => 4,
+            'supported_types' => ['Boots'],
+            'supported_materials' => ['Genuine Leather', 'Nubuck', 'Suede'],
+            'unsuited_materials' => ['Canvas', 'Mesh/Knit'],
+            'target_issues' => ['Kotor Ringan/Debu', 'Lumpur/Kotor Membandel', 'Bau/Bakteri', 'Jamur'],
+            'is_active' => true,
+        ]);
+
+        // 3. Suede & Nubuck Care (supports Sneakers, Suede, Kotor Ringan & Bau/Bakteri)
+        $suedeCare = Service::create([
+            'name' => 'Suede & Nubuck Care (Warna Gelap)',
+            'slug' => 'suede-care-treatment',
+            'description' => 'Suede description',
+            'price' => 55000,
+            'estimated_days' => 3,
+            'supported_types' => ['Sneakers', 'Boots', 'Loafers', 'Slip-on'],
+            'supported_materials' => ['Suede', 'Nubuck'],
+            'unsuited_materials' => ['Canvas', 'Mesh/Knit'],
+            'target_issues' => ['Kotor Ringan/Debu', 'Bau/Bakteri', 'Jamur'],
+            'is_active' => true,
+        ]);
+
+        $result = $this->service->recommend('Sneakers', 'Suede', ['Kotor Ringan/Debu', 'Bau/Bakteri']);
+
+        $this->assertTrue($result['has_recommendations']);
+        $slugs = array_column($result['recommendations'], 'slug');
+
+        // Suede care MUST be the top recommendation
+        $this->assertEquals('suede-care-treatment', $result['recommendations'][0]['slug']);
+
+        // Sandals and Boots MUST NOT be recommended for Sneakers
+        $this->assertNotContains('sandal-birkenstock-care', $slugs);
+        $this->assertNotContains('boots-heavy-duty-care', $slugs);
+    }
 }
