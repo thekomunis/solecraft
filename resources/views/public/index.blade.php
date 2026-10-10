@@ -50,27 +50,35 @@
 
                 <!-- Key Consultation Highlights (Customer-Oriented) -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-slate-200/80">
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 01</p>
-                            <p class="text-sm font-bold text-slate-900 mt-1">Tipe Sepatu</p>
+                    <!-- Step 1: Tipe Sepatu -->
+                    <a href="#diagnostik" class="p-3.5 bg-white hover:bg-amber-50/20 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-start group block">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-black text-amber-800 uppercase tracking-wider">Langkah 01</span>
+                            <span class="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200/80 px-1.5 py-0.5 rounded-full">6 Tipe</span>
                         </div>
-                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Sneakers, Boots, Loafers, Slip-on, Canvas Shoes, Sports</p>
-                    </div>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 02</p>
-                            <p class="text-sm font-bold text-slate-900 mt-1">Bahan Material</p>
+                        <p class="text-sm font-bold text-slate-900 group-hover:text-amber-700 transition-colors mt-1">Tipe Sepatu</p>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-snug">Sneakers, Boots, Loafers, <span class="whitespace-nowrap">Slip-on</span>, Canvas, Sports</p>
+                    </a>
+
+                    <!-- Step 2: Bahan Material -->
+                    <a href="#diagnostik" class="p-3.5 bg-white hover:bg-amber-50/20 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-start group block">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-black text-amber-800 uppercase tracking-wider">Langkah 02</span>
+                            <span class="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200/80 px-1.5 py-0.5 rounded-full">6 Bahan</span>
                         </div>
-                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Canvas, Suede, Nubuck, Genuine Leather, Synthetic, Mesh/Knit</p>
-                    </div>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 03</p>
-                            <p class="text-sm font-bold text-slate-900 mt-1">Kondisi &amp; Keluhan</p>
+                        <p class="text-sm font-bold text-slate-900 group-hover:text-amber-700 transition-colors mt-1">Bahan Material</p>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-snug">Canvas, Suede, Nubuck, Leather, Synthetic, Mesh</p>
+                    </a>
+
+                    <!-- Step 3: Kondisi & Keluhan -->
+                    <a href="#diagnostik" class="p-3.5 bg-white hover:bg-amber-50/20 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-start group block">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-black text-amber-800 uppercase tracking-wider">Langkah 03</span>
+                            <span class="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200/80 px-1.5 py-0.5 rounded-full">7 Kendala</span>
                         </div>
-                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Kotor Ringan / Debu, Lumpur &amp; Noda Berat, Bau &amp; Bakteri, Bintik Jamur, Midsole Menguning, Warna Pudar (Repaint), Sol Mengelupas (Reglue)</p>
-                    </div>
+                        <p class="text-sm font-bold text-slate-900 group-hover:text-amber-700 transition-colors mt-1">Kondisi &amp; Keluhan</p>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-snug">Debu, Lumpur, Bau, Jamur, Unyellowing, Repaint, Reglue</p>
+                    </a>
                 </div>
             </div>
 
