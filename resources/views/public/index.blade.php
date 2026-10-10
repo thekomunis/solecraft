@@ -49,21 +49,27 @@
                 </div>
 
                 <!-- Key Consultation Highlights (Customer-Oriented) -->
-                <div class="grid grid-cols-3 gap-3 pt-6 border-t border-slate-200/80">
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs transition-shadow">
-                        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 01</p>
-                        <p class="text-sm font-bold text-slate-900 mt-1">Tipe Sepatu</p>
-                        <p class="text-xs text-slate-500 mt-0.5 truncate">Sneakers, Boots, Casual</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-slate-200/80">
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 01</p>
+                            <p class="text-sm font-bold text-slate-900 mt-1">Tipe Sepatu</p>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Sneakers, Boots, Loafers, Slip-on, Canvas Shoes, Sports</p>
                     </div>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs transition-shadow">
-                        <p class="text-xs font-bold text-slate-700 uppercase tracking-wider">Langkah 02</p>
-                        <p class="text-sm font-bold text-slate-900 mt-1">Bahan Material</p>
-                        <p class="text-xs text-slate-500 mt-0.5 truncate">Canvas, Suede, Kulit</p>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 02</p>
+                            <p class="text-sm font-bold text-slate-900 mt-1">Bahan Material</p>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Canvas, Suede, Nubuck, Genuine Leather, Synthetic, Mesh/Knit</p>
                     </div>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs transition-shadow">
-                        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 03</p>
-                        <p class="text-sm font-bold text-slate-900 mt-1">Kebutuhan Spesifik</p>
-                        <p class="text-xs text-slate-500 mt-0.5 truncate">Clean, Reglue, Whitening</p>
+                    <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-2xs hover:shadow-xs hover:border-amber-300 transition-all flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Langkah 03</p>
+                            <p class="text-sm font-bold text-slate-900 mt-1">Kondisi &amp; Keluhan</p>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Kotor Ringan / Debu, Lumpur &amp; Noda Berat, Bau &amp; Bakteri, Bintik Jamur, Midsole Menguning, Warna Pudar (Repaint), Sol Mengelupas (Reglue)</p>
                     </div>
                 </div>
             </div>
